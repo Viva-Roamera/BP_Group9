@@ -57,4 +57,22 @@ def test_coolblue():
     response = requests.get(url, headers=headers, timeout=10)
     print(f"Coolblue: robots.txt allows = {allowed}, real request status = {response.status_code}")
 
-test_coolblue()
+# test_coolblue()
+
+def test_zavvi():
+    ## Testing shop 3: Zavvi
+    ## Result first try: robots.txt allows = True, real request status = 200
+    Decision: Zavvi confirmed scrapable
+
+    url = "https://www.zavvi.com/p/toys-lego/lego-mindstorms-ev3-robot-coding-robotics-kit-31313/10757770/"
+    domain = "https://www.zavvi.com"
+    headers = {"User-Agent": "Mozilla/5.0 (Group9 student project; contact: https://github.com/Viva-Roamera/BP_Group9)"}
+
+    rp = RobotFileParser()
+    rp.set_url(f"{domain}/robots.txt")
+    rp.read()
+    allowed = rp.can_fetch(headers["User-Agent"], url)
+
+    response = requests.get(url, headers=headers, timeout=10)
+    print(f"Zavvi: robots.txt allows = {allowed}, real request status = {response.status_code}")
+test_zavvi()
