@@ -3,7 +3,8 @@
 
 import requests
 from urllib.robotparser import RobotFileParser
-from bs4 import BeautifulSoup
+from bs4 import BeautifulSoup ## Added in second step
+import re ## Added for availability check
 
 def test_lego():
     ## Testing shop 1: LEGO.com
@@ -109,5 +110,5 @@ def test_zavvi():
     print(f"Product: {name}")
     print(f"Price: {price}")
 
-## Only calling this test and not all
-test_zavvi()
+    ## Only calling this test and not all
+    #test_zavvi()
