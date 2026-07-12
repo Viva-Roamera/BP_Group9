@@ -3,6 +3,7 @@
 
 import requests
 from urllib.robotparser import RobotFileParser
+from bs4 import BeautifulSoup
 
 def test_lego():
     ## Testing shop 1: LEGO.com
@@ -62,17 +63,51 @@ def test_coolblue():
 def test_zavvi():
     ## Testing shop 3: Zavvi
     ## Result first try: robots.txt allows = True, real request status = 200
-    Decision: Zavvi confirmed scrapable
+    ## Decision: Zavvi confirmed scrapable
+    ## Added comments to explain each step
+    ## Result second step: robots.txt allows = False, real request status = 200 Product: LEGO MINDSTORMS: EV3 Robot Coding Robotics Kit (31313) Price: Â£249.99
+    ## Will inspect issues with encoding mismatch and robots.txt allows = False
+    ## Debugging result: Direct robots.txt fetch status: 200 Zavvi: robots.txt allows = True, real request status = 200 Product: LEGO MINDSTORMS: EV3 Robot Coding Robotics Kit (31313) Price: £249.99
+    ## Debugging resolved: RobotFileParser's own robots.txt fetch was unreliable, Fixed by fetching robots.txt myself and feeding it directly into the parser
+    ## Decision: Zavvi confirmed scrapable, name and price extraction working correctly
 
+    ## First step
     url = "https://www.zavvi.com/p/toys-lego/lego-mindstorms-ev3-robot-coding-robotics-kit-31313/10757770/"
     domain = "https://www.zavvi.com"
     headers = {"User-Agent": "Mozilla/5.0 (Group9 student project; contact: https://github.com/Viva-Roamera/BP_Group9)"}
 
+    ## First step: Check robots.txt permission first
     rp = RobotFileParser()
     rp.set_url(f"{domain}/robots.txt")
-    rp.read()
+    ## Removed rp. read() 
+
+    ## Diagnostic: check if robots.txt itself was actually fetched successfully
+    ## Will try and fetch robots.txt myself instead of letting RobotFileParser fetch it seperately
+    robots_response = requests.get(f"{domain}/robots.txt", headers=headers, timeout=10)
+    print(f"Direct robots.txt fetch status: {robots_response.status_code}")
+    ## Removed: print(f"First 200 characters of robots.txt: {robots_response.text[:200]}")
+
+    ## Feed the robots.txt content we already fetched directly into the parser
+    rp.parse(robots_response.text.splitlines())
     allowed = rp.can_fetch(headers["User-Agent"], url)
 
+    ## First step: Fetch the actual page
     response = requests.get(url, headers=headers, timeout=10)
+    response.encoding = "utf-8" ## Fix: force correct character encoding so £ displays properly
     print(f"Zavvi: robots.txt allows = {allowed}, real request status = {response.status_code}")
+
+    ## Second step: Parse the HTML so we can pull out real data
+    soup = BeautifulSoup(response.text, "html.parser")
+
+    ## Second step: Extract product name using its data-testid (stable identifier, less likely to break if Zavvi redesigns the site)
+    name = soup.find("h1", attrs={"data-testid": "pdp-product-title"}).text.strip()
+
+    ## Second step: Extract price using its class name
+    price = soup.find("span", class_="pdp-price-text").text.strip()
+
+    ## Second step:
+    print(f"Product: {name}")
+    print(f"Price: {price}")
+
+## Only calling this test and not all
 test_zavvi()
