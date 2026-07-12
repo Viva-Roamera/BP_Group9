@@ -5,13 +5,13 @@ import requests
 from urllib.robotparser import RobotFileParser
 
 def test_lego():
+    ## Testing shop 1: LEGO.com
     ## Result first try: robots.txt allows = True, real request status = 403
     ## LEGO's own rules say this page is fine to scrape, but the live server is refusing the request anyway
     ## Will update headers and try rerunning to see if status code changes
-    ## Original headers - blocked with 403
-    # headers = {"User-Agent": "Mozilla/5.0 (Group9 student project; contact: https://github.com/Viva-Roamera/BP_Group9)"}
+    # Original header: headers = {"User-Agent": "Mozilla/5.0 (Group9 student project; contact: https://github.com/Viva-Roamera/BP_Group9)"}
     ## Updated headers - added Accept-Language and Accept to look more like a real browser
-    ## LEGO.com test (12 Jul 2026): robots.txt allows scraping, but server blocks non-browser requests (403) even with browser-style headers
+    ## Result second try: robots.txt allows = True, real request status = 403
     ## Chose not to disguise our script as a real browser to bypass this, staying transparent about being an automated tool
     ## Decision: LEGO.com excluded, moving to next candidate shop
 
@@ -35,4 +35,26 @@ def test_lego():
 
     print(f"robots.txt allows = {allowed}, real request status = {status}")
 
+
+def test_coolblue():
+    ## Testing shop 2: Coolblue
+    ## Result first try: robots.txt allows = False, real request status = 200
+    ## Coolblue's own rules say don't scrape this page, but technically, the request succeeded, the page loaded just fine
+    ## Will try a specific product page instead of category page to see if they are under different rules
+    # Original URL: url = "https://www.coolblue.de/en/lego/lego-technic"
+    ## Result second try: robots.txt allows = False, real request status = 200
+    ## Decision: coolblue.de excluded, moving to next candidate shop
     
+    url = "https://www.coolblue.de/en/product/972613/lego-speed-champions-aston-martin-aramco-f1-amr24-race-car-77245.html"
+    domain = "https://www.coolblue.de"
+    headers = {"User-Agent": "Mozilla/5.0 (Group9 student project; contact: https://github.com/Viva-Roamera/BP_Group9)"}
+
+    rp = RobotFileParser()
+    rp.set_url(f"{domain}/robots.txt")
+    rp.read()
+    allowed = rp.can_fetch(headers["User-Agent"], url)
+
+    response = requests.get(url, headers=headers, timeout=10)
+    print(f"Coolblue: robots.txt allows = {allowed}, real request status = {response.status_code}")
+
+test_coolblue()
