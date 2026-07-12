@@ -4,7 +4,6 @@
 import requests
 from urllib.robotparser import RobotFileParser
 from bs4 import BeautifulSoup ## Added in second step
-import re ## Added for availability check
 
 def test_lego():
     ## Testing shop 1: LEGO.com
