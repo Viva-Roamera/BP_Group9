@@ -1,3 +1,18 @@
+"""
+Melanie - Brickmo.com - Product Price Scraper
+==============================================
+
+Website:
+    https://www.brickmo.com/
+
+Purpose:
+    Scrapes product names and prices from category/listing pages
+    for competitor price monitoring.
+
+Output:
+    Product name, price, and related product information.
+"""
+
 import requests
 from bs4 import BeautifulSoup
 
