@@ -30,7 +30,7 @@ from bs4 import BeautifulSoup
 # CONFIG 
 # ----------------------------------------------------------------------
 START_URLS = [
-    "https://bricksdirect.com/",
+    "https://bricksdirect.com/", "https://bricksdirect.com/lego-icons",
     # Add more category/listing page URLs here, e.g.:
     # "https://bricksdirect.com/collections/lego-star-wars",
 ]
@@ -65,7 +65,7 @@ def clean_price(text: str):
     if not text:
         return None, None
     text = text.strip()
-    currency_match = re.search(r"[€$£]", text)
+    currency_match = re.search(r"[€]", text)
     currency = currency_match.group(0) if currency_match else None
     number_match = re.search(r"[\d.,]+", text)
     if not number_match:
