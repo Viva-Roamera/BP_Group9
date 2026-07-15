@@ -1,19 +1,5 @@
-"""
-Melanie - Brickmo.com - Product Price Scraper
-==============================================
-
-Website:
-    https://www.brickmo.com/
-
-Purpose:
-    Scrapes product names and prices from category/listing pages
-    for competitor price monitoring.
-
-Output:
-    Product name, price, and related product information.
-"""
-
 import requests
+import pandas as pd
 from bs4 import BeautifulSoup
 
 
@@ -41,12 +27,12 @@ def scrape_page(url):
 
     for product in product_boxes:
 
-        # Find the product information
+        # Find product information
         name = product.find("a", class_="product--title")
         price = product.find("span", class_="price--default")
         pieces = product.find("div", class_="list-bricks")
 
-        # Clean the price
+        # Clean price
         price_text = ""
 
         if price:
@@ -58,17 +44,18 @@ def scrape_page(url):
                 .strip()
             )
 
-        # Clean the number of pieces
+        # Clean pieces
         pieces_text = ""
 
         if pieces:
             pieces_text = (
                 pieces.get_text(strip=True)
                 .replace("Teile", "")
+                .replace("Pieces", "")
                 .strip()
             )
 
-        # Save the product
+        # Save product
         if name:
             products.append({
                 "shop": "Brickmo",
@@ -80,3 +67,21 @@ def scrape_page(url):
 
     return products
 
+
+if __name__ == "__main__":
+
+    url = "https://www.brickmo.com/en/lego/lego-icons/"
+
+    products = scrape_page(url)
+
+    # Convert to DataFrame
+    df = pd.DataFrame(products)
+
+    # Save CSV in the current folder
+    df.to_csv(
+        "brickmo_prices.csv",
+        index=False,
+        encoding="utf-8-sig"
+    )
+
+    print(f"\n{len(products)} products saved to brickmo_prices.csv")
