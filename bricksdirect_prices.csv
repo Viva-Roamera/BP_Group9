@@ -1,36 +1,96 @@
 ﻿name,price,currency,url
-Details,44.14,$,https://bricksdirect.com/lego-5010053-airplane
-LEGO 5009157 Amelia Ticket Booth,44.14,$,https://bricksdirect.com/lego-5009157-amelia-ticket-booth
-"LEGO 5005907 Patch, Sew-On Cloth Round, Apollo Lunar Lander",22.07,$,https://bricksdirect.com/lego-5005907-patch-sew-on-cloth-round-apollo-lunar-lander
-LEGO 5005822 Ford Mustang Key Chain,22.07,$,https://bricksdirect.com/lego-5005822-ford-mustang-key-chain
-LEGO 5002948 C-3PO,16.55,$,https://bricksdirect.com/lego-5002948-c-3po
-LEGO 75119 Sergeant Jyn erso,16.55,$,https://bricksdirect.com/lego-75119-sergeant-jyn-erso
-LEGO 75148 encounter on Jakku,66.22,$,https://bricksdirect.com/lego-75148-encounter-on-jakku
-LEGO 21034 London,35.31,$,https://bricksdirect.com/lego-21034-london
-LEGO 75525 Baze Malbus,22.07,$,https://bricksdirect.com/lego-75525-baze-malbus
-LEGO 75524 Chirrut Îmwe,22.07,$,https://bricksdirect.com/lego-75524-chirrut-imwe
-"LEGO 72160 Arcanine (Pre order, will be shipped on 01/08/2026)",93.82,$,https://bricksdirect.com/lego-72160-arcanine
-"LEGO 72154 Iconic Trainer Moments Poké Ball (Pre order, will be shipped on 01/10/2026)",243.95,$,https://bricksdirect.com/lego-72154-iconic-trainer-moments-poke-ball
-"LEGO 72150 Munchlax (Pre order, will be shipped on 01/08/2026)",66.22,$,https://bricksdirect.com/lego-72150-munchlax
-"LEGO 43031 Olivia Rodrigo’s Dual Guitar (Pre order, will be shipped on 01/08/2026)",112.59,$,https://bricksdirect.com/lego-43031-olivia-rodrigos-dual-guitar
-"LEGO 43030 Olivia Rodrigo’s Secret Storage (Pre order, will be shipped on 01/08/2026)",75.05,$,https://bricksdirect.com/lego-43030-olivia-rodrigos-secret-storage
-"LEGO 75455 Boba Fett (Pre order, will be shipped on 01/08/2026)",160.06,$,https://bricksdirect.com/lego-75455-boba-fett
-"LEGO 72168 Rayquaza (Pre order, will be shipped on 01/08/2026)",122.52,$,https://bricksdirect.com/lego-72168-rayquaza
-"LEGO 72537 Derpy Tiger and Sussie Bird (Pre order, will be shipped on 01/08/2026)",66.22,$,https://bricksdirect.com/lego-72537-derpy-tiger-and-sussie-bird
-"LEGO 75454 Imperial Remnant AT-AT with INT-4 (Pre order, will be shipped on 01/08/2026)",150.12,$,https://bricksdirect.com/lego-75454-imperial-remnant-at-at-with-int-4
-"LEGO 60510 Advent Calendar 2026, City (Pre order, will be shipped on 01/09/2026)",25.38,$,https://bricksdirect.com/lego-60510-advent-calendar-2026-city
-LEGO 60509 Harbor Freight Train with Crane & Truck,121.42,$,https://bricksdirect.com/lego-60509-harbor-freight-train-with-crane--truck
-LEGO 60506 Classic Beach Streetcar,66.22,$,https://bricksdirect.com/lego-60506-classic-beach-streetcar
-LEGO 60511 Vintage Steam Train,84.98,$,https://bricksdirect.com/lego-60511-vintage-steam-train
-LEGO 60512 Mountain Bike Adventure Van,33.11,$,https://bricksdirect.com/lego-60512-mountain-bike-adventure-van
-LEGO 60492 Passenger Jet,28.69,$,https://bricksdirect.com/lego-60492-passenger-jet
-LEGO 60494 Dump Truck & Front End Loader,112.59,$,https://bricksdirect.com/lego-60494-dump-truck--front-end-loader
-LEGO 60497 Drive-Through Car Wash,51.87,$,https://bricksdirect.com/lego-60497-drive-through-car-wash
-LEGO 42705 Cozy Fall Forest Cabin,93.82,$,https://bricksdirect.com/lego-42705-cozy-fall-forest-cabin
-LEGO 42701 Koala Habitat & Care Center,82.78,$,https://bricksdirect.com/lego-42701-koala-habitat--care-center
-LEGO 42703 Mermaid Roller Coaster Ride,93.82,$,https://bricksdirect.com/lego-42703-mermaid-roller-coaster-ride
-LEGO 42700 Candy & Cupcake Ferris Wheel,56.29,$,https://bricksdirect.com/lego-42700-candy--cupcake-ferris-wheel
-LEGO 42704 Heartlake City Grand Hotel,141.28,$,https://bricksdirect.com/lego-42704-heartlake-city-grand-hotel
-LEGO 42702 Spinning Flower & Fairy Teacup Ride,37.52,$,https://bricksdirect.com/lego-42702-spinning-flower--fairy-teacup-ride
-LEGO 42694 Pizza Truck,14.34,$,https://bricksdirect.com/lego-42694-pizza-truck
-"LEGO 42698 Advent Calendar 2026, Friends (Pre order, will be shipped on 01/09/2026)",25.38,$,https://bricksdirect.com/lego-42698-advent-calendar-2026-friends
+Details,38.01,€,https://bricksdirect.com/lego-5010053-airplane
+LEGO 5009157 Amelia Ticket Booth,38.01,€,https://bricksdirect.com/lego-5009157-amelia-ticket-booth
+"LEGO 5005907 Patch, Sew-On Cloth Round, Apollo Lunar Lander",19.0,€,https://bricksdirect.com/lego-5005907-patch-sew-on-cloth-round-apollo-lunar-lander
+LEGO 5005822 Ford Mustang Key Chain,19.0,€,https://bricksdirect.com/lego-5005822-ford-mustang-key-chain
+LEGO 5002948 C-3PO,14.25,€,https://bricksdirect.com/lego-5002948-c-3po
+LEGO 75119 Sergeant Jyn erso,14.25,€,https://bricksdirect.com/lego-75119-sergeant-jyn-erso
+LEGO 75148 encounter on Jakku,57.02,€,https://bricksdirect.com/lego-75148-encounter-on-jakku
+LEGO 21034 London,30.4,€,https://bricksdirect.com/lego-21034-london
+LEGO 75525 Baze Malbus,19.0,€,https://bricksdirect.com/lego-75525-baze-malbus
+LEGO 75524 Chirrut Îmwe,19.0,€,https://bricksdirect.com/lego-75524-chirrut-imwe
+"LEGO 72160 Arcanine (Pre order, will be shipped on 01/08/2026)",80.78,€,https://bricksdirect.com/lego-72160-arcanine
+"LEGO 72154 Iconic Trainer Moments Poké Ball (Pre order, will be shipped on 01/10/2026)",210.03,€,https://bricksdirect.com/lego-72154-iconic-trainer-moments-poke-ball
+"LEGO 72150 Munchlax (Pre order, will be shipped on 01/08/2026)",57.01,€,https://bricksdirect.com/lego-72150-munchlax
+"LEGO 43031 Olivia Rodrigo’s Dual Guitar (Pre order, will be shipped on 01/08/2026)",96.93,€,https://bricksdirect.com/lego-43031-olivia-rodrigos-dual-guitar
+"LEGO 43030 Olivia Rodrigo’s Secret Storage (Pre order, will be shipped on 01/08/2026)",64.62,€,https://bricksdirect.com/lego-43030-olivia-rodrigos-secret-storage
+"LEGO 75455 Boba Fett (Pre order, will be shipped on 01/08/2026)",137.8,€,https://bricksdirect.com/lego-75455-boba-fett
+"LEGO 72168 Rayquaza (Pre order, will be shipped on 01/08/2026)",105.49,€,https://bricksdirect.com/lego-72168-rayquaza
+"LEGO 72537 Derpy Tiger and Sussie Bird (Pre order, will be shipped on 01/08/2026)",57.01,€,https://bricksdirect.com/lego-72537-derpy-tiger-and-sussie-bird
+"LEGO 75454 Imperial Remnant AT-AT with INT-4 (Pre order, will be shipped on 01/08/2026)",129.25,€,https://bricksdirect.com/lego-75454-imperial-remnant-at-at-with-int-4
+"LEGO 60510 Advent Calendar 2026, City (Pre order, will be shipped on 01/09/2026)",21.85,€,https://bricksdirect.com/lego-60510-advent-calendar-2026-city
+LEGO 60509 Harbor Freight Train with Crane & Truck,104.54,€,https://bricksdirect.com/lego-60509-harbor-freight-train-with-crane--truck
+LEGO 60506 Classic Beach Streetcar,57.01,€,https://bricksdirect.com/lego-60506-classic-beach-streetcar
+LEGO 60511 Vintage Steam Train,73.17,€,https://bricksdirect.com/lego-60511-vintage-steam-train
+LEGO 60512 Mountain Bike Adventure Van,28.5,€,https://bricksdirect.com/lego-60512-mountain-bike-adventure-van
+LEGO 60492 Passenger Jet,24.7,€,https://bricksdirect.com/lego-60492-passenger-jet
+LEGO 60494 Dump Truck & Front End Loader,96.93,€,https://bricksdirect.com/lego-60494-dump-truck--front-end-loader
+LEGO 60497 Drive-Through Car Wash,44.66,€,https://bricksdirect.com/lego-60497-drive-through-car-wash
+LEGO 42705 Cozy Fall Forest Cabin,80.78,€,https://bricksdirect.com/lego-42705-cozy-fall-forest-cabin
+LEGO 42701 Koala Habitat & Care Center,71.27,€,https://bricksdirect.com/lego-42701-koala-habitat--care-center
+LEGO 42703 Mermaid Roller Coaster Ride,80.78,€,https://bricksdirect.com/lego-42703-mermaid-roller-coaster-ride
+LEGO 42700 Candy & Cupcake Ferris Wheel,48.46,€,https://bricksdirect.com/lego-42700-candy--cupcake-ferris-wheel
+LEGO 42704 Heartlake City Grand Hotel,121.64,€,https://bricksdirect.com/lego-42704-heartlake-city-grand-hotel
+LEGO 42702 Spinning Flower & Fairy Teacup Ride,32.31,€,https://bricksdirect.com/lego-42702-spinning-flower--fairy-teacup-ride
+LEGO 42694 Pizza Truck,12.35,€,https://bricksdirect.com/lego-42694-pizza-truck
+"LEGO 42698 Advent Calendar 2026, Friends (Pre order, will be shipped on 01/09/2026)",21.85,€,https://bricksdirect.com/lego-42698-advent-calendar-2026-friends
+LEGO 40913 Vintage Parade Car,33.25,€,https://bricksdirect.com/lego-40913-vintage-parade-car
+LEGO 40757 Corner Kiosk,57.02,€,https://bricksdirect.com/lego-40757-corner-kiosk
+LEGO 40586 Moving Truck,38.01,€,https://bricksdirect.com/lego-40586-moving-truck
+LEGO 11389 Project Hail Mary,114.04,€,https://bricksdirect.com/lego-11389-project-hail-mary
+LEGO 11384 Golden Retriever Puppy,113.09,€,https://bricksdirect.com/lego-11384-golden-retriever-puppy
+LEGO 11380 Road Bike,96.93,€,https://bricksdirect.com/lego-11380-road-bike
+LEGO 11378 Douglas DC-3 PAN AM Airliner,218.59,€,https://bricksdirect.com/lego-11378-douglas-dc-3-pan-am-airliner
+LEGO 11376 Ford Model T,105.49,€,https://bricksdirect.com/lego-11376-ford-model-t
+LEGO 11375 Ferrari F2004 & Michael Schumacher,73.17,€,https://bricksdirect.com/lego-11375-ferrari-f2004--michael-schumacher
+LEGO 11374 Arcade Pinball Machine,209.08,€,https://bricksdirect.com/lego-11374-arcade-pinball-machine
+LEGO 11373 The Lord of the Rings: Sauron’s Helmet,71.27,€,https://bricksdirect.com/lego-11373-the-lord-of-the-rings-saurons-helmet
+LEGO 11372 Autumn Cottage Garden,89.33,€,https://bricksdirect.com/lego-11372-autumn-cottage-garden
+LEGO 11371 Shopping Street,339.98,,https://bricksdirect.com/lego-11371-shopping-street
+LEGO 11370 Stranger Things: The Creel House,364.27,,https://bricksdirect.com/lego-11370-stranger-things-the-creel-house
+LEGO 10497 Galaxy explorer,176.61,,https://bricksdirect.com/lego-10497-galaxy-explorer
+LEGO 10391 Over the Moon with Pharrell Williams,145.7,,https://bricksdirect.com/lego-10391-over-the-moon-with-pharrell-williams
+LEGO 10375 How to Train Your Dragon: Toothless,88.3,,https://bricksdirect.com/lego-10375-how-to-train-your-dragon-toothless
+LEGO 10367 The Lord of the Rings: Balrog Book Nook,109.28,,https://bricksdirect.com/lego-10367-the-lord-of-the-rings-balrog-book-nook
+LEGO 10366 Tropical Aquarium,582.84,,https://bricksdirect.com/lego-10366-tropical-aquarium
+LEGO 10365 Captain Jack Sparrow’s Pirate Ship,441.54,,https://bricksdirect.com/lego-10365-captain-jack-sparrows-pirate-ship
+LEGO 10363 Leonardo da Vinci’s Flying Machine,52.98,,https://bricksdirect.com/lego-10363-leonardo-da-vincis-flying-machine
+LEGO 10362 French Café,88.3,,https://bricksdirect.com/lego-10362-french-cafe
+LEGO 10361 Holiday Express Train,154.53,,https://bricksdirect.com/lego-10361-holiday-express-train
+LEGO 10360 Shuttle Carrier Aircraft,275.96,,https://bricksdirect.com/lego-10360-shuttle-carrier-aircraft
+LEGO 10359 Fountain Garden,110.38,,https://bricksdirect.com/lego-10359-fountain-garden
+LEGO 10358 Transformers: Soundwave,198.69,,https://bricksdirect.com/lego-10358-transformers-soundwave
+LEGO 10357 Shelby Cobra 427 S/C,176.61,,https://bricksdirect.com/lego-10357-shelby-cobra-427-sc
+LEGO 10356 Star Trek: U.S.S. Enterprise NCC-1701-D,465.83,,https://bricksdirect.com/lego-10356-star-trek-u-s-s--enterprise-ncc-1701-d
+LEGO 10355 Blacktron Renegade,121.42,,https://bricksdirect.com/lego-10355-blacktron-renegade
+LEGO 10354 The Lord of the Rings: The Shire,309.08,,https://bricksdirect.com/lego-10354-the-lord-of-the-rings-the-shire
+LEGO 10353 Williams Racing FW14B & Nigel Mansell,70.64,,https://bricksdirect.com/lego-10353-williams-racing-fw14b--nigel-mansell
+LEGO 10352 The Simpsons: Krusty Burger,253.88,,https://bricksdirect.com/lego-10352-the-simpsons-krusty-burger
+LEGO 10351 Sherlock Holmes: Book Nook,143.49,,https://bricksdirect.com/lego-10351-sherlock-holmes-book-nook
+LEGO 10350 Tudor Corner,264.92,,https://bricksdirect.com/lego-10350-tudor-corner
+LEGO 10341 NASA Artemis Space Launch System,331.15,,https://bricksdirect.com/lego-10341-nasa-artemis-space-launch-system
+LEGO 10339 Santa’s Post Office,187.65,,https://bricksdirect.com/lego-10339-santas-post-office
+LEGO 10338 Bumblebee,99.34,,https://bricksdirect.com/lego-10338-bumblebee
+LEGO 10337 Lamborghini Countach 5000 Quattrovalvole,220.77,,https://bricksdirect.com/lego-10337-lamborghini-countach-5000-quattrovalvole
+LEGO 10335 The Endurance,331.15,,https://bricksdirect.com/lego-10335-the-endurance
+LEGO 10334 Retro Radio,165.57,,https://bricksdirect.com/lego-10334-retro-radio
+LEGO 10333 The Lord of the Rings: Barad-dûr,551.93,,https://bricksdirect.com/lego-10333-the-lord-of-the-rings-barad-dur
+LEGO 10332 Medieval Town Square,331.15,,https://bricksdirect.com/lego-10332-medieval-town-square
+DetailsView details,55.18,,https://bricksdirect.com/lego-10331-kingfisher-bird
+LEGO 10330 McLaren MP4/4 & Ayrton Senna,70.64,,https://bricksdirect.com/lego-10330-mclaren-mp44--ayrton-senna
+LEGO 10327 Dune Atreides Royal Ornithopter,182.13,,https://bricksdirect.com/lego-10327-dune-atreides-royal-ornithopter
+LEGO 10326 Natural History Museum,364.27,,https://bricksdirect.com/lego-10326-natural-history-museum
+LEGO 10325 Alpine Lodge,220.77,,https://bricksdirect.com/lego-10325-alpine-lodge
+LEGO 10323 PAC-MAN Arcade,331.15,,https://bricksdirect.com/lego-10323-pac-man-arcade
+LEGO 10321 Corvette,242.84,,https://bricksdirect.com/lego-10321-corvette
+LEGO 10320 Eldorado Fortress,331.15,,https://bricksdirect.com/lego-10320-eldorado-fortress
+LEGO 10318 Concorde,275.96,,https://bricksdirect.com/lego-10318-concorde
+LEGO 10317 Land Rover Classic Defender 90,275.96,,https://bricksdirect.com/lego-10317-land-rover-classic-defender-90
+LEGO 10316 Rivendell,607.13,,https://bricksdirect.com/lego-10316-rivendell
+LEGO 10315 Tranquil Garden,115.89,,https://bricksdirect.com/lego-10315-tranquil-garden
+LEGO 10312 Jazz Club,386.35,,https://bricksdirect.com/lego-10312-jazz-club
+LEGO 10308 Holiday Main Street,187.65,,https://bricksdirect.com/lego-10308-holiday-main-street
+LEGO 10307 Eiffel Tower,772.71,,https://bricksdirect.com/lego-10307-eiffel-tower
+LEGO 10306 Atari 2600,275.96,,https://bricksdirect.com/lego-10306-atari-2600
+LEGO 10305 Lion Knights’ Castle,607.13,,https://bricksdirect.com/lego-10305-lion-knights-castle
+LEGO 10304 Chevrolet Camaro Z28,242.84,,https://bricksdirect.com/lego-10304-chevrolet-camaro-z28
