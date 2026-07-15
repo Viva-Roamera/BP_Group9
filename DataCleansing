@@ -4,7 +4,7 @@ import re
 # 1. Load the data
 bricks_df = pd.read_csv('bricksdirect_prices.csv')
 zavvi_df = pd.read_csv('zavvi_prices.csv', sep=';')
-
+brickmo_prices_df = pd.read_csv('brickmo_prices.csv')
 # 2. Function to extract 4-8 digit IDs
 def extract_product_id(text):
     # Regex searches for a sequence of 4 to 8 digits
@@ -14,6 +14,7 @@ def extract_product_id(text):
 # 3. Apply the function
 bricks_df['ProductID'] = bricks_df['name'].apply(extract_product_id)
 zavvi_df['ProductID'] = zavvi_df['name'].apply(extract_product_id)
+brickmo_prices_df['ProductID'] = brickmo_prices_df['name'].apply(extract_product_id)
 
 # 4. Verify the results
 print("BricksDirect Sample with ProductID:")
@@ -21,3 +22,6 @@ print(bricks_df[['name', 'ProductID']].head(10))
 
 print("\nZavvi Sample with ProductID:")
 print(zavvi_df[['name', 'ProductID']].head(10))
+
+print("\nBrickmo Sample with ProductID:")       
+print(brickmo_prices_df[['name', 'ProductID']].head(10))
