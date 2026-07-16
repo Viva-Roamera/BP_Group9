@@ -13,7 +13,7 @@ City, Ninjago.
 - Brickmo
 - Zavvi
 - BricksDirect
-- JP Spielwaren
+- JB Spielwaren
 
 ## Project structure
 ```
