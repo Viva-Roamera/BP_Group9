@@ -1,5 +1,7 @@
 """
 ## Iva - BricksDirect.com - product price scraper
+Note: Need to install the following packages if not already installed:
+    pip install pandas beautifulsoup4 requests
 ============================================
 Scrapes product name + price from listing/category pages on
 https://bricksdirect.com/
@@ -8,14 +10,13 @@ Price is read from:
     <span class="price product-price" aria-label="Price"> €22.80 </span>
 
 Responsible scraping:
-  - CRAWL_DELAY_SECONDS is set to 15 seconds between requests, as defined in bricksdirect.com/robots.txt
+  - CRAWL_DELAY_SECONDS is set to 10 seconds between requests, as defined in bricksdirect.com/robots.txt
     first.
-    already fairly conservative.
   - Only reads publicly listed catalog/category pages (GET requests).
   - Sends a normal browser User-Agent; does not bypass any login/paywall.
 
 Output:
-  - CSV file written to OUTPUT_PATH
+  - CSV file written to OUTPUT_PATH: bricksdirect_prices.csv
 """
 
 import csv
@@ -30,12 +31,12 @@ from bs4 import BeautifulSoup
 # CONFIG 
 # ----------------------------------------------------------------------
 START_URLS = [
-    "https://bricksdirect.com/", "https://bricksdirect.com/lego-icons",
+    "https://bricksdirect.com/lego-city", "https://bricksdirect.com/lego-star-wars", "https://bricksdirect.com/lego-friends"
     # Add more category/listing page URLs here, e.g.:
     # "https://bricksdirect.com/collections/lego-star-wars",
 ]
 MAX_PAGES_PER_CATEGORY = 5       # how many paginated pages to follow per start URL
-CRAWL_DELAY_SECONDS = 15.0       # required delay between requests
+CRAWL_DELAY_SECONDS = 10.0       # required delay between requests
 
 # Save the CSV in the same folder as this script, whatever machine it runs on.
 SCRIPT_DIR = Path(__file__).resolve().parent
@@ -77,12 +78,22 @@ def clean_price(text: str):
         return None, currency
 
 
+def extract_category(soup: BeautifulSoup) -> str:
+    heading = soup.select_one('h1.page-heading.js-category-page')
+    if heading:
+        text = heading.get_text(" ", strip=True)
+        if text:
+            return text
+    return ""
+
+
 def parse_products(soup: BeautifulSoup) -> list[dict]:
     """
     Extract product cards using the price span as the anchor:
         <span class="price product-price" aria-label="Price"> €22.80 </span>
     """
     products = []
+    category = extract_category(soup)
     price_spans = soup.select('span.price.product-price[aria-label="Price"]')
 
     for price_span in price_spans:
@@ -130,6 +141,7 @@ def parse_products(soup: BeautifulSoup) -> list[dict]:
 
         products.append(
             {
+                "category": category,
                 "name": name,
                 "price": price,
                 "currency": currency,
@@ -196,7 +208,7 @@ def save_to_csv(products: list[dict], output_path: str) -> None:
     out_path = Path(output_path)
     out_path.parent.mkdir(parents=True, exist_ok=True)
 
-    fieldnames = ["name", "price", "currency", "url"]
+    fieldnames = ["category", "name", "price", "currency", "url"]
     with out_path.open("w", newline="", encoding="utf-8-sig") as f:
         writer = csv.DictWriter(f, fieldnames=fieldnames)
         writer.writeheader()
