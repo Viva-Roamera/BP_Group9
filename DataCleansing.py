@@ -39,7 +39,7 @@ def process_file(df, shop_name):
     if 'shop' not in df.columns:
         df['shop'] = shop_name
         
-    final_cols = ['shop', 'ProductID', 'name', 'category', 'price', 'url']
+    final_cols = ['shop', 'ProductID', 'name', 'category', 'price', 'url', 'collection_date']
     for col in final_cols:
         if col not in df.columns:
             df[col] = None
