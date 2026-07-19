@@ -1,101 +1,117 @@
-shop,ProductID,name,category,price,url
-JB Spielwaren,75455,LEGO 75455 Boba Fett™,Lego Star Wars,144.49,https://www.jb-spielwaren.de/en/lego-75455-boba-fett/a-648673936/
-JB Spielwaren,75454,LEGO 75454 Imperial Remnant AT-AT™ with INT-4,Lego Star Wars,135.99,https://www.jb-spielwaren.de/en/lego-75454-imperial-remnant-at-at-with-int-4/a-75454/
-JB Spielwaren,75453,LEGO 75453 Offworld Sandcrawler™ and Mudhorn,Lego Star Wars,169.99,https://www.jb-spielwaren.de/en/lego-75453-offworld-sandcrawler-and-mudhorn/a-75453/
-JB Spielwaren,75461,LEGO 75461 Up-Scaled Darth Vader™ Minifigure,Lego Star Wars,99.99,https://www.jb-spielwaren.de/en/lego-75461-up-scaled-darth-vader-minifigure/a-75461/
-JB Spielwaren,75458,LEGO 75458 mperial Remnant AT-RT Driver™ Helmet,Lego Star Wars,69.99,https://www.jb-spielwaren.de/en/lego-75458-mperial-remnant-at-rt-driver-helmet/a-75458/
-JB Spielwaren,75459,LEGO 75459 Imperial Lambda-Class Shuttle,Lego Star Wars,149.99,https://www.jb-spielwaren.de/en/lego-75459-imperial-lambda-class-shuttle/a-75459/
-JB Spielwaren,75456,LEGO 75456 Advent Calendar 2026,Lego Star Wars,29.74,https://www.jb-spielwaren.de/en/lego-75456-advent-calendar-2026/a-75456/
-JB Spielwaren,75451,LEGO 75451 Hutt Palace Sentry Droid Showdown,Lego Star Wars,42.49,https://www.jb-spielwaren.de/en/lego-75451-hutt-palace-sentry-droid-showdown/a-75451/
-JB Spielwaren,75442,LEGO 75442 The Mandalorian N-1 Starfighter,Lego Star Wars,249.99,https://www.jb-spielwaren.de/en/lego-75442-the-mandalorian-n-1-starfighter/a-75442/
-JB Spielwaren,30728,LEGO 30728 The Razor Crest™ Mini-Build,Lego Star Wars,3.19,https://www.jb-spielwaren.de/en/lego-30728-the-razor-crest-mini-build/a-30728/
-JB Spielwaren,75445,LEGO 75445 Anzellan Starship,Lego Star Wars,63.74,https://www.jb-spielwaren.de/en/lego-75445-anzellan-starship/a-75445/
-JB Spielwaren,75447,LEGO 75447 The Razor Crest™,Lego Star Wars,127.49,https://www.jb-spielwaren.de/en/lego-75447-the-razor-crest/a-75447/
-JB Spielwaren,75446,LEGO 75446 Grogu™ (apprenti du Mandalorien),Lego Star Wars,110.49,https://www.jb-spielwaren.de/en/lego-75446-grogu-apprenti-du-mandalorien/a-75446/
-JB Spielwaren,75439,LEGO 75439 Darth Vader™ Bust,Lego Star Wars,39.99,https://www.jb-spielwaren.de/en/lego-75439-darth-vader-bust/a-75439/
-JB Spielwaren,75438,LEGO 75438 Yoda™ Bust,Lego Star Wars,31.99,https://www.jb-spielwaren.de/en/lego-75438-yoda-bust/a-75438/
-JB Spielwaren,75444,LEGO 75444 AT-RT™ Attack,Lego Star Wars,38.24,https://www.jb-spielwaren.de/en/lego-75444-at-rt-attack/a-75444/
-JB Spielwaren,75449,LEGO 75449 Siege of Mandalore Battle Pack,Lego Star Wars,16.99,https://www.jb-spielwaren.de/en/lego-75449-siege-of-mandalore-battle-pack/a-75449/
-JB Spielwaren,75452,LEGO 75452 The astromech droid BB-8,Lego Star Wars,62.99,https://www.jb-spielwaren.de/en/lego-75452-the-astromech-droid-bb-8/a-75452/
-JB Spielwaren,75440,LEGO 75440 AT-AT,Lego Star Wars,55.24,https://www.jb-spielwaren.de/en/lego-75440-at-at/a-75440/
-JB Spielwaren,75443,LEGO 75443 Grogu's Homestead,Lego Star Wars,16.99,https://www.jb-spielwaren.de/en/lego-75443-grogu-s-homestead/a-75443/
-JB Spielwaren,75448,LEGO 75448 Clone Shock Trooper™ Mech,Lego Star Wars,12.74,https://www.jb-spielwaren.de/en/lego-75448-clone-shock-trooper-mech/a-75448/
-JB Spielwaren,75441,LEGO 75441 Venator-Class Attack Cruiser,Lego Star Wars,63.99,https://www.jb-spielwaren.de/en/lego-75441-venator-class-attack-cruiser/a-75441/
-JB Spielwaren,75436,LEGO 75436 The Mandalorian & Grogu's Speeder Bike™,Lego Star Wars,8.49,https://www.jb-spielwaren.de/en/lego-75436-the-mandalorian-grogu-s-speeder-bike/a-75436/
-JB Spielwaren,75437,LEGO 75437 Cobb Vanth's Speeder,Lego Star Wars,25.49,https://www.jb-spielwaren.de/en/lego-75437-cobb-vanth-s-speeder/a-75437/
-JB Spielwaren,75430,LEGO 75430 The Ewok Wicket™,Lego Star Wars,107.99,https://www.jb-spielwaren.de/en/lego-75430-the-ewok-wicket/a-75430/
-JB Spielwaren,75419,LEGO 75419 Death Star,Lego Star Wars,999.99,https://www.jb-spielwaren.de/en/lego-75419-death-star/a-75419/
-JB Spielwaren,40771,LEGO 40771 TIE Fighter with Imperial Hangar Rack,Lego Star Wars,159.99,https://www.jb-spielwaren.de/en/lego-40771-tie-fighter-with-imperial-hangar-rack/a-40771/
-JB Spielwaren,75432,LEGO 75432 V-19 Torrent Starfighter,Lego Star Wars,45.0,https://www.jb-spielwaren.de/en/lego-75432-v-19-torrent-starfighter/a-75432/
-JB Spielwaren,42698,LEGO 42698 Advent Calendar 2026,Lego Friends,22.94,https://www.jb-spielwaren.de/en/lego-42698-advent-calendar-2026/a-42698/
-JB Spielwaren,42705,LEGO 42705 Cozy Fall Forest Cabin,Lego Friends,84.99,https://www.jb-spielwaren.de/en/lego-42705-cozy-fall-forest-cabin/a-42705/
-JB Spielwaren,42703,LEGO 42703 Mermaid Roller Coaster Ride,Lego Friends,84.99,https://www.jb-spielwaren.de/en/lego-42703-mermaid-roller-coaster-ride/a-42703/
-JB Spielwaren,42702,LEGO 42702 Spinning Flower & Fairy Teacup Ride,Lego Friends,33.99,https://www.jb-spielwaren.de/en/lego-42702-spinning-flower-fairy-teacup-ride/a-42702/
-JB Spielwaren,42704,LEGO 42704 Heartlake City Grand Hotel,Lego Friends,127.49,https://www.jb-spielwaren.de/en/lego-42704-heartlake-city-grand-hotel/a-42704/
-JB Spielwaren,42693,LEGO 42693 Creative Flower Shop,Lego Friends,25.49,https://www.jb-spielwaren.de/en/lego-42693-creative-flower-shop/a-42693/
-JB Spielwaren,42700,LEGO 42700 Candy & Cupcake Ferris Wheel,Lego Friends,50.99,https://www.jb-spielwaren.de/en/lego-42700-candy-cupcake-ferris-wheel/a-42700/
-JB Spielwaren,42697,LEGO 42697 Creative Dollhouse Suitcase,Lego Friends,42.49,https://www.jb-spielwaren.de/en/lego-42697-creative-dollhouse-suitcase/a-42697/
-JB Spielwaren,42694,LEGO 42694 Pizza Truck,Lego Friends,12.74,https://www.jb-spielwaren.de/en/lego-42694-pizza-truck/a-42694/
-JB Spielwaren,42682,LEGO 42682 Nature Glamping Cabin,Lego Friends,21.24,https://www.jb-spielwaren.de/en/lego-42682-nature-glamping-cabin/a-42682/
-JB Spielwaren,42676,LEGO 42676 Fun Water Park Day,Lego Friends,25.49,https://www.jb-spielwaren.de/en/lego-42676-fun-water-park-day/a-42676/
-JB Spielwaren,42690,LEGO 42690 Forest Tea Party,Lego Friends,8.49,https://www.jb-spielwaren.de/en/lego-42690-forest-tea-party/a-42690/
-JB Spielwaren,42699,LEGO 42699 Beach House with Seals,Lego Friends,42.49,https://www.jb-spielwaren.de/en/lego-42699-beach-house-with-seals/a-42699/
-JB Spielwaren,42695,LEGO 42695 Horse & Baby Foal Trailer,Lego Friends,25.49,https://www.jb-spielwaren.de/en/lego-42695-horse-baby-foal-trailer/a-42695/
-JB Spielwaren,42692,LEGO 42692 Ice Cream & Balloon Stand,Lego Friends,8.49,https://www.jb-spielwaren.de/en/lego-42692-ice-cream-balloon-stand/a-42692/
-JB Spielwaren,42689,LEGO 42689 Heartlake City Friends Club House,Lego Friends,71.99,https://www.jb-spielwaren.de/en/lego-42689-heartlake-city-friends-club-house/a-42689/
-JB Spielwaren,42696,LEGO 42696 Animal Vet Clinic,Lego Friends,25.49,https://www.jb-spielwaren.de/en/lego-42696-animal-vet-clinic/a-42696/
-JB Spielwaren,42686,LEGO 42686 Fun Indoor Playground,Lego Friends,47.99,https://www.jb-spielwaren.de/en/lego-42686-fun-indoor-playground/a-42686/
-JB Spielwaren,42685,LEGO 42685 Heartlake City Fashion Show,Lego Friends,42.49,https://www.jb-spielwaren.de/en/lego-42685-heartlake-city-fashion-show/a-42685/
-JB Spielwaren,42687,LEGO 42687 Liann's Family House,Lego Friends,55.99,https://www.jb-spielwaren.de/en/lego-42687-liann-s-family-house/a-42687/
-JB Spielwaren,42688,LEGO 42688 Horse Stable and Riding Academy,Lego Friends,55.99,https://www.jb-spielwaren.de/en/lego-42688-horse-stable-and-riding-academy/a-42688/
-JB Spielwaren,42684,LEGO 42684 Unicorn Dream Café,Lego Friends,33.99,https://www.jb-spielwaren.de/en/lego-42684-unicorn-dream-cafe/a-42684/
-JB Spielwaren,42681,LEGO 42681 Axolotl Adventure Boat,Lego Friends,8.49,https://www.jb-spielwaren.de/en/lego-42681-axolotl-adventure-boat/a-42681/
-JB Spielwaren,42680,LEGO 42680 Heartlake City Convenience Store,Lego Friends,16.99,https://www.jb-spielwaren.de/en/lego-42680-heartlake-city-convenience-store/a-42680/
-JB Spielwaren,11386,LEGO 11386 SpongeBob SquarePants: Bikini Bottom,Lego Icons,178.49,https://www.jb-spielwaren.de/en/lego-11386-spongebob-squarepants-bikini-bottom/a-11386/
-JB Spielwaren,11381,LEGO 11381 Jaguar E-Type,Lego Icons,118.99,https://www.jb-spielwaren.de/en/lego-11381-jaguar-e-type/a-11381/
-JB Spielwaren,11383,LEGO 11383 Mayor Manor,Lego Icons,93.49,https://www.jb-spielwaren.de/en/lego-11383-mayor-manor/a-11383/
-JB Spielwaren,11382,LEGO 11382 Hubble Space Telescope,Lego Icons,110.49,https://www.jb-spielwaren.de/en/lego-11382-hubble-space-telescope/a-11382/
-JB Spielwaren,11380,LEGO 11380 Road Bike,Lego Icons,94.99,https://www.jb-spielwaren.de/en/lego-11380-road-bike/a-11380/
-JB Spielwaren,11371,LEGO 11371 Shopping Street,Lego Icons,249.99,https://www.jb-spielwaren.de/en/lego-11371-shopping-street/a-11371/
-JB Spielwaren,11370,LEGO 11370 Stranger Things: The Creel House,Lego Icons,279.99,https://www.jb-spielwaren.de/en/lego-11370-stranger-things-the-creel-house/a-11370/
-JB Spielwaren,10352,LEGO 10352 The Simpsons™: Krusty Burger,Lego Icons,199.99,https://www.jb-spielwaren.de/en/lego-10352-the-simpsons-krusty-burger/a-10352/
-JB Spielwaren,11384,LEGO 11384 Golden Retriever Puppy,Lego Icons,118.99,https://www.jb-spielwaren.de/en/lego-11384-golden-retriever-puppy/a-11384/
-JB Spielwaren,11376,LEGO 11376 Ford Model T,Lego Icons,94.99,https://www.jb-spielwaren.de/en/lego-11376-ford-model-t/a-11376/
-JB Spielwaren,11373,LEGO 11373 The Lord of the Rings: Sauron's Helmet,Lego Icons,59.99,https://www.jb-spielwaren.de/en/lego-11373-icons-11373/a-11373/
-JB Spielwaren,11375,LEGO 11375 Ferrari F2004 & Michael Schumacher,Lego Icons,76.49,https://www.jb-spielwaren.de/en/lego-11375-ferrari-f2004-michael-schumacher/a-11375/
-JB Spielwaren,11372,LEGO 11372 ICONS 11372,Lego Icons,87.99,https://www.jb-spielwaren.de/en/lego-11372-icons-11372/a-11372/
-JB Spielwaren,10357,LEGO 10357 Shelby Cobra 427 S/C,Lego Icons,149.99,https://www.jb-spielwaren.de/en/lego-10357-shelby-cobra-427-s/c/a-10357/
-JB Spielwaren,10358,LEGO 10358 Transformers: Soundwave,Lego Icons,134.99,https://www.jb-spielwaren.de/en/lego-10358-transformers-soundwave/a-10358/
-JB Spielwaren,10367,LEGO 10367 The Lord of the Rings: Gandalf vs. Balrog,Lego Icons,101.99,https://www.jb-spielwaren.de/en/lego-10367-the-lord-of-the-rings-gandalf-vs-balrog/a-10367/
-JB Spielwaren,40814,LEGO 40814 Baby Elephant in the Sky,Lego Icons,29.99,https://www.jb-spielwaren.de/en/lego-40814-baby-elephant-in-the-sky/a-40814/
-JB Spielwaren,40690,LEGO 40690 Homage to the books of Jules Verne,Lego Icons,34.99,https://www.jb-spielwaren.de/en/lego-40690-homage-to-the-books-of-jules-verne/a-40690/
-JB Spielwaren,40744,LEGO 40744 Christmas Ornament Selection,Lego Icons,11.04,https://www.jb-spielwaren.de/en/lego-40744-christmas-ornament-selection/a-40744/
-JB Spielwaren,40721,LEGO 40721 Halloween Barn,Lego Icons,11.99,https://www.jb-spielwaren.de/en/lego-40721-halloween-barn/a-40721/
-JB Spielwaren,40743,LEGO 40743 Christmas Table Decoration,Lego Icons,33.99,https://www.jb-spielwaren.de/en/lego-40743-christmas-table-decoration/a-40743/
-JB Spielwaren,40813,LEGO 40813 Lucky Cat,Lego Icons,25.49,https://www.jb-spielwaren.de/en/lego-40813-lucky-cat/a-40813/
-JB Spielwaren,10335,LEGO 10335 Endurance,Lego Icons,269.99,https://www.jb-spielwaren.de/en/lego-10335-endurance/a-10335/
-JB Spielwaren,40824,LEGO 40824 Love messenger Tweety,Lego Icons,29.74,https://www.jb-spielwaren.de/en/lego-40824-love-messenger-tweety/a-40824/
-JB Spielwaren,60511,LEGO 60511 Vintage Steam Train,Lego City,76.49,https://www.jb-spielwaren.de/en/lego-60511-vintage-steam-train/a-60511/
-JB Spielwaren,60506,LEGO 60506 Classic Beach Streetcar,Lego City,59.49,https://www.jb-spielwaren.de/en/lego-60506-classic-beach-streetcar/a-60506/
-JB Spielwaren,60494,LEGO 60494 Dump Truck & Front End Loader,Lego City,101.99,https://www.jb-spielwaren.de/en/lego-60494-dump-truck-front-end-loader/a-60494/
-JB Spielwaren,60480,LEGO 60480 Yellow Backhoe Loader,Lego City,25.49,https://www.jb-spielwaren.de/en/lego-60480-yellow-backhoe-loader/a-60480/
-JB Spielwaren,60492,LEGO 60492 Passenger Jet,Lego City,25.49,https://www.jb-spielwaren.de/en/lego-60492-passenger-jet/a-60492/
-JB Spielwaren,60497,LEGO 60497 Drive-Through Car Wash,Lego City,46.74,https://www.jb-spielwaren.de/en/lego-60497-drive-through-car-wash/a-60497/
-JB Spielwaren,60496,LEGO 60496 Pizza Delivery Experience with Vehicles,Lego City,42.49,https://www.jb-spielwaren.de/en/lego-60496-pizza-delivery-experience-with-vehicles/a-60496/
-JB Spielwaren,60510,LEGO 60510 Advent Calendar 2026,Lego City,22.94,https://www.jb-spielwaren.de/en/lego-60510-advent-calendar-2026/a-60510/
-JB Spielwaren,60508,LEGO 60508 Police Train Heist,Lego City,169.99,https://www.jb-spielwaren.de/en/lego-60508-police-train-heist/a-60508/
-JB Spielwaren,60493,LEGO 60493 F1® Truck with Audi F1® race car,Lego City,38.24,https://www.jb-spielwaren.de/en/lego-60493-f1-truck-with-audi-f1-race-car/a-60493/
-JB Spielwaren,60484,LEGO 60484 Rides – Gaming Race Car,Lego City,8.49,https://www.jb-spielwaren.de/en/lego-60484-rides-gaming-race-car/a-60484/
-JB Spielwaren,60483,LEGO 60483 Rides – Construction Loader,Lego City,8.49,https://www.jb-spielwaren.de/en/lego-60483-rides-construction-loader/a-60483/
-JB Spielwaren,60482,LEGO 60482 Rides – Fire Truck,Lego City,8.49,https://www.jb-spielwaren.de/en/lego-60482-rides-fire-truck/a-60482/
-JB Spielwaren,60504,LEGO 60504 Coast Guard Rescue Boat & Helicopter,Lego City,87.99,https://www.jb-spielwaren.de/en/lego-60504-coast-guard-rescue-boat-helicopter/a-60504/
-JB Spielwaren,60481,LEGO 60481 Rides – Police Truck,Lego City,8.49,https://www.jb-spielwaren.de/en/lego-60481-rides-police-truck/a-60481/
-JB Spielwaren,60505,"LEGO 60505 Airplane, Service Truck & Hovercraft Remix",Lego City,55.99,https://www.jb-spielwaren.de/en/lego-60505-airplane-service-truck-hovercraft-remix/a-60505/
-JB Spielwaren,60479,LEGO 60479 Police Prisoner Transport Van,Lego City,16.99,https://www.jb-spielwaren.de/en/lego-60479-police-prisoner-transport-van/a-60479/
-JB Spielwaren,60503,LEGO 60503 Coast Guard Helicopter,Lego City,41.99,https://www.jb-spielwaren.de/en/lego-60503-coast-guard-helicopter/a-60503/
-JB Spielwaren,60498,LEGO 60498 Tractor,Lego City,16.99,https://www.jb-spielwaren.de/en/lego-60498-tractor/a-60498/
-JB Spielwaren,60491,LEGO 60491 Motorcycle Transporter,Lego City,16.99,https://www.jb-spielwaren.de/en/lego-60491-motorcycle-transporter/a-60491/
-JB Spielwaren,60490,LEGO 60490 Snowplow,Lego City,21.24,https://www.jb-spielwaren.de/en/lego-60490-snowplow/a-60490/
-JB Spielwaren,60500,LEGO 60500 The LEGO® Van,Lego City,25.49,https://www.jb-spielwaren.de/en/lego-60500-the-lego-van/a-60500/
-JB Spielwaren,60487,LEGO 60487 Yellow Taxi,Lego City,12.74,https://www.jb-spielwaren.de/en/lego-60487-yellow-taxi/a-60487/
-JB Spielwaren,60486,LEGO 60486 EV Supercar,Lego City,8.49,https://www.jb-spielwaren.de/en/lego-60486-ev-supercar/a-60486/
+shop,ProductID,name,category,price,url,collection_date
+JB Spielwaren,75455,LEGO 75455 Boba Fett™,Lego Star Wars,144.49,https://www.jb-spielwaren.de/en/lego-75455-boba-fett/a-648673936/,2026-07-19
+JB Spielwaren,75454,LEGO 75454 Imperial Remnant AT-AT™ with INT-4,Lego Star Wars,135.99,https://www.jb-spielwaren.de/en/lego-75454-imperial-remnant-at-at-with-int-4/a-75454/,2026-07-19
+JB Spielwaren,75453,LEGO 75453 Offworld Sandcrawler™ and Mudhorn,Lego Star Wars,169.99,https://www.jb-spielwaren.de/en/lego-75453-offworld-sandcrawler-and-mudhorn/a-75453/,2026-07-19
+JB Spielwaren,75461,LEGO 75461 Up-Scaled Darth Vader™ Minifigure,Lego Star Wars,99.99,https://www.jb-spielwaren.de/en/lego-75461-up-scaled-darth-vader-minifigure/a-75461/,2026-07-19
+JB Spielwaren,75458,LEGO 75458 mperial Remnant AT-RT Driver™ Helmet,Lego Star Wars,69.99,https://www.jb-spielwaren.de/en/lego-75458-mperial-remnant-at-rt-driver-helmet/a-75458/,2026-07-19
+JB Spielwaren,75459,LEGO 75459 Imperial Lambda-Class Shuttle,Lego Star Wars,149.99,https://www.jb-spielwaren.de/en/lego-75459-imperial-lambda-class-shuttle/a-75459/,2026-07-19
+JB Spielwaren,75456,LEGO 75456 Advent Calendar 2026,Lego Star Wars,29.74,https://www.jb-spielwaren.de/en/lego-75456-advent-calendar-2026/a-75456/,2026-07-19
+JB Spielwaren,75451,LEGO 75451 Hutt Palace Sentry Droid Showdown,Lego Star Wars,42.49,https://www.jb-spielwaren.de/en/lego-75451-hutt-palace-sentry-droid-showdown/a-75451/,2026-07-19
+JB Spielwaren,75442,LEGO 75442 The Mandalorian N-1 Starfighter,Lego Star Wars,249.99,https://www.jb-spielwaren.de/en/lego-75442-the-mandalorian-n-1-starfighter/a-75442/,2026-07-19
+JB Spielwaren,30728,LEGO 30728 The Razor Crest™ Mini-Build,Lego Star Wars,3.19,https://www.jb-spielwaren.de/en/lego-30728-the-razor-crest-mini-build/a-30728/,2026-07-19
+JB Spielwaren,75447,LEGO 75447 The Razor Crest™,Lego Star Wars,127.49,https://www.jb-spielwaren.de/en/lego-75447-the-razor-crest/a-75447/,2026-07-19
+JB Spielwaren,75445,LEGO 75445 Anzellan Starship,Lego Star Wars,63.74,https://www.jb-spielwaren.de/en/lego-75445-anzellan-starship/a-75445/,2026-07-19
+JB Spielwaren,75446,LEGO 75446 Grogu™ (apprenti du Mandalorien),Lego Star Wars,110.49,https://www.jb-spielwaren.de/en/lego-75446-grogu-apprenti-du-mandalorien/a-75446/,2026-07-19
+JB Spielwaren,75438,LEGO 75438 Yoda™ Bust,Lego Star Wars,31.99,https://www.jb-spielwaren.de/en/lego-75438-yoda-bust/a-75438/,2026-07-19
+JB Spielwaren,75439,LEGO 75439 Darth Vader™ Bust,Lego Star Wars,39.99,https://www.jb-spielwaren.de/en/lego-75439-darth-vader-bust/a-75439/,2026-07-19
+JB Spielwaren,75444,LEGO 75444 AT-RT™ Attack,Lego Star Wars,38.24,https://www.jb-spielwaren.de/en/lego-75444-at-rt-attack/a-75444/,2026-07-19
+JB Spielwaren,75449,LEGO 75449 Siege of Mandalore Battle Pack,Lego Star Wars,16.99,https://www.jb-spielwaren.de/en/lego-75449-siege-of-mandalore-battle-pack/a-75449/,2026-07-19
+JB Spielwaren,75452,LEGO 75452 The astromech droid BB-8,Lego Star Wars,62.99,https://www.jb-spielwaren.de/en/lego-75452-the-astromech-droid-bb-8/a-75452/,2026-07-19
+JB Spielwaren,75443,LEGO 75443 Grogu's Homestead,Lego Star Wars,16.99,https://www.jb-spielwaren.de/en/lego-75443-grogu-s-homestead/a-75443/,2026-07-19
+JB Spielwaren,75440,LEGO 75440 AT-AT,Lego Star Wars,55.24,https://www.jb-spielwaren.de/en/lego-75440-at-at/a-75440/,2026-07-19
+JB Spielwaren,75448,LEGO 75448 Clone Shock Trooper™ Mech,Lego Star Wars,12.74,https://www.jb-spielwaren.de/en/lego-75448-clone-shock-trooper-mech/a-75448/,2026-07-19
+JB Spielwaren,75441,LEGO 75441 Venator-Class Attack Cruiser,Lego Star Wars,63.99,https://www.jb-spielwaren.de/en/lego-75441-venator-class-attack-cruiser/a-75441/,2026-07-19
+JB Spielwaren,75436,LEGO 75436 The Mandalorian & Grogu's Speeder Bike™,Lego Star Wars,8.49,https://www.jb-spielwaren.de/en/lego-75436-the-mandalorian-grogu-s-speeder-bike/a-75436/,2026-07-19
+JB Spielwaren,75437,LEGO 75437 Cobb Vanth's Speeder,Lego Star Wars,25.49,https://www.jb-spielwaren.de/en/lego-75437-cobb-vanth-s-speeder/a-75437/,2026-07-19
+JB Spielwaren,42698,LEGO 42698 Advent Calendar 2026,Lego Friends,22.94,https://www.jb-spielwaren.de/en/lego-42698-advent-calendar-2026/a-42698/,2026-07-19
+JB Spielwaren,42705,LEGO 42705 Cozy Fall Forest Cabin,Lego Friends,84.99,https://www.jb-spielwaren.de/en/lego-42705-cozy-fall-forest-cabin/a-42705/,2026-07-19
+JB Spielwaren,42704,LEGO 42704 Heartlake City Grand Hotel,Lego Friends,127.49,https://www.jb-spielwaren.de/en/lego-42704-heartlake-city-grand-hotel/a-42704/,2026-07-19
+JB Spielwaren,42702,LEGO 42702 Spinning Flower & Fairy Teacup Ride,Lego Friends,33.99,https://www.jb-spielwaren.de/en/lego-42702-spinning-flower-fairy-teacup-ride/a-42702/,2026-07-19
+JB Spielwaren,42703,LEGO 42703 Mermaid Roller Coaster Ride,Lego Friends,84.99,https://www.jb-spielwaren.de/en/lego-42703-mermaid-roller-coaster-ride/a-42703/,2026-07-19
+JB Spielwaren,42697,LEGO 42697 Creative Dollhouse Suitcase,Lego Friends,42.49,https://www.jb-spielwaren.de/en/lego-42697-creative-dollhouse-suitcase/a-42697/,2026-07-19
+JB Spielwaren,42694,LEGO 42694 Pizza Truck,Lego Friends,12.74,https://www.jb-spielwaren.de/en/lego-42694-pizza-truck/a-42694/,2026-07-19
+JB Spielwaren,42700,LEGO 42700 Candy & Cupcake Ferris Wheel,Lego Friends,50.99,https://www.jb-spielwaren.de/en/lego-42700-candy-cupcake-ferris-wheel/a-42700/,2026-07-19
+JB Spielwaren,42693,LEGO 42693 Creative Flower Shop,Lego Friends,25.49,https://www.jb-spielwaren.de/en/lego-42693-creative-flower-shop/a-42693/,2026-07-19
+JB Spielwaren,42682,LEGO 42682 Nature Glamping Cabin,Lego Friends,21.24,https://www.jb-spielwaren.de/en/lego-42682-nature-glamping-cabin/a-42682/,2026-07-19
+JB Spielwaren,42690,LEGO 42690 Forest Tea Party,Lego Friends,8.49,https://www.jb-spielwaren.de/en/lego-42690-forest-tea-party/a-42690/,2026-07-19
+JB Spielwaren,42676,LEGO 42676 Fun Water Park Day,Lego Friends,25.49,https://www.jb-spielwaren.de/en/lego-42676-fun-water-park-day/a-42676/,2026-07-19
+JB Spielwaren,42699,LEGO 42699 Beach House with Seals,Lego Friends,42.49,https://www.jb-spielwaren.de/en/lego-42699-beach-house-with-seals/a-42699/,2026-07-19
+JB Spielwaren,42695,LEGO 42695 Horse & Baby Foal Trailer,Lego Friends,25.49,https://www.jb-spielwaren.de/en/lego-42695-horse-baby-foal-trailer/a-42695/,2026-07-19
+JB Spielwaren,42689,LEGO 42689 Heartlake City Friends Club House,Lego Friends,71.99,https://www.jb-spielwaren.de/en/lego-42689-heartlake-city-friends-club-house/a-42689/,2026-07-19
+JB Spielwaren,42696,LEGO 42696 Animal Vet Clinic,Lego Friends,25.49,https://www.jb-spielwaren.de/en/lego-42696-animal-vet-clinic/a-42696/,2026-07-19
+JB Spielwaren,42692,LEGO 42692 Ice Cream & Balloon Stand,Lego Friends,8.49,https://www.jb-spielwaren.de/en/lego-42692-ice-cream-balloon-stand/a-42692/,2026-07-19
+JB Spielwaren,42686,LEGO 42686 Fun Indoor Playground,Lego Friends,47.99,https://www.jb-spielwaren.de/en/lego-42686-fun-indoor-playground/a-42686/,2026-07-19
+JB Spielwaren,42687,LEGO 42687 Liann's Family House,Lego Friends,55.99,https://www.jb-spielwaren.de/en/lego-42687-liann-s-family-house/a-42687/,2026-07-19
+JB Spielwaren,42685,LEGO 42685 Heartlake City Fashion Show,Lego Friends,42.49,https://www.jb-spielwaren.de/en/lego-42685-heartlake-city-fashion-show/a-42685/,2026-07-19
+JB Spielwaren,42688,LEGO 42688 Horse Stable and Riding Academy,Lego Friends,55.99,https://www.jb-spielwaren.de/en/lego-42688-horse-stable-and-riding-academy/a-42688/,2026-07-19
+JB Spielwaren,42680,LEGO 42680 Heartlake City Convenience Store,Lego Friends,16.99,https://www.jb-spielwaren.de/en/lego-42680-heartlake-city-convenience-store/a-42680/,2026-07-19
+JB Spielwaren,42684,LEGO 42684 Unicorn Dream Café,Lego Friends,33.99,https://www.jb-spielwaren.de/en/lego-42684-unicorn-dream-cafe/a-42684/,2026-07-19
+JB Spielwaren,42681,LEGO 42681 Axolotl Adventure Boat,Lego Friends,8.49,https://www.jb-spielwaren.de/en/lego-42681-axolotl-adventure-boat/a-42681/,2026-07-19
+JB Spielwaren,42678,LEGO 42678 Pet Accessories Van,Lego Friends,16.99,https://www.jb-spielwaren.de/en/lego-42678-pet-accessories-van/a-42678/,2026-07-19
+JB Spielwaren,42677,LEGO 42677 Dog Treats Bakery,Lego Friends,25.49,https://www.jb-spielwaren.de/en/lego-42677-dog-treats-bakery/a-42677/,2026-07-19
+JB Spielwaren,42679,LEGO 42679 Heartlake City Bunny Hotel,Lego Friends,21.24,https://www.jb-spielwaren.de/en/lego-42679-heartlake-city-bunny-hotel/a-42679/,2026-07-19
+JB Spielwaren,42675,LEGO 42675 Unicorn Cake Delivery Car,Lego Friends,8.49,https://www.jb-spielwaren.de/en/lego-42675-unicorn-cake-delivery-car/a-42675/,2026-07-19
+JB Spielwaren,42674,LEGO 42674 Comic Book and Game Store,Lego Friends,89.99,https://www.jb-spielwaren.de/en/lego-42674-comic-book-and-game-store/a-42674/,2026-07-19
+JB Spielwaren,42673,LEGO 42673 Family Vacation Beach Resort,Lego Friends,110.49,https://www.jb-spielwaren.de/en/lego-42673-family-vacation-beach-resort/a-42673/,2026-07-19
+JB Spielwaren,42671,LEGO 42671 Plant Café & Flower Shop,Lego Friends,76.49,https://www.jb-spielwaren.de/en/lego-42671-plant-cafe-flower-shop/a-42671/,2026-07-19
+JB Spielwaren,42665,LEGO 42665 Puppy Playground,Lego Friends,8.49,https://www.jb-spielwaren.de/en/lego-42665-puppy-playground/a-42665/,2026-07-19
+JB Spielwaren,42664,LEGO 42664 Travel Boat Adventure,Lego Friends,63.74,https://www.jb-spielwaren.de/en/lego-42664-travel-boat-adventure/a-42664/,2026-07-19
+JB Spielwaren,42661,LEGO 42661 Costume Party with Unicorn & Fairy,Lego Friends,33.99,https://www.jb-spielwaren.de/en/lego-42661-costume-party-with-unicorn-fairy/a-42661/,2026-07-19
+JB Spielwaren,42666,LEGO 42666 Cat Birthday Party & Tree House,Lego Friends,25.49,https://www.jb-spielwaren.de/en/lego-42666-cat-birthday-party-tree-house/a-42666/,2026-07-19
+JB Spielwaren,42653,LEGO 42653 Music Store & Apartment,Lego Friends,42.49,https://www.jb-spielwaren.de/en/lego-42653-music-store-apartment/a-42653/,2026-07-19
+JB Spielwaren,11386,LEGO 11386 SpongeBob SquarePants: Bikini Bottom,Lego Icons,178.49,https://www.jb-spielwaren.de/en/lego-11386-spongebob-squarepants-bikini-bottom/a-11386/,2026-07-19
+JB Spielwaren,11381,LEGO 11381 Jaguar E-Type,Lego Icons,118.99,https://www.jb-spielwaren.de/en/lego-11381-jaguar-e-type/a-11381/,2026-07-19
+JB Spielwaren,11382,LEGO 11382 Hubble Space Telescope,Lego Icons,110.49,https://www.jb-spielwaren.de/en/lego-11382-hubble-space-telescope/a-11382/,2026-07-19
+JB Spielwaren,11383,LEGO 11383 Mayor Manor,Lego Icons,93.49,https://www.jb-spielwaren.de/en/lego-11383-mayor-manor/a-11383/,2026-07-19
+JB Spielwaren,11380,LEGO 11380 Road Bike,Lego Icons,94.99,https://www.jb-spielwaren.de/en/lego-11380-road-bike/a-11380/,2026-07-19
+JB Spielwaren,11371,LEGO 11371 Shopping Street,Lego Icons,249.99,https://www.jb-spielwaren.de/en/lego-11371-shopping-street/a-11371/,2026-07-19
+JB Spielwaren,11370,LEGO 11370 Stranger Things: The Creel House,Lego Icons,279.99,https://www.jb-spielwaren.de/en/lego-11370-stranger-things-the-creel-house/a-11370/,2026-07-19
+JB Spielwaren,10352,LEGO 10352 The Simpsons™: Krusty Burger,Lego Icons,199.99,https://www.jb-spielwaren.de/en/lego-10352-the-simpsons-krusty-burger/a-10352/,2026-07-19
+JB Spielwaren,11384,LEGO 11384 Golden Retriever Puppy,Lego Icons,118.99,https://www.jb-spielwaren.de/en/lego-11384-golden-retriever-puppy/a-11384/,2026-07-19
+JB Spielwaren,11376,LEGO 11376 Ford Model T,Lego Icons,94.99,https://www.jb-spielwaren.de/en/lego-11376-ford-model-t/a-11376/,2026-07-19
+JB Spielwaren,11375,LEGO 11375 Ferrari F2004 & Michael Schumacher,Lego Icons,76.49,https://www.jb-spielwaren.de/en/lego-11375-ferrari-f2004-michael-schumacher/a-11375/,2026-07-19
+JB Spielwaren,11373,LEGO 11373 The Lord of the Rings: Sauron's Helmet,Lego Icons,59.99,https://www.jb-spielwaren.de/en/lego-11373-icons-11373/a-11373/,2026-07-19
+JB Spielwaren,11372,LEGO 11372 ICONS 11372,Lego Icons,87.99,https://www.jb-spielwaren.de/en/lego-11372-icons-11372/a-11372/,2026-07-19
+JB Spielwaren,10357,LEGO 10357 Shelby Cobra 427 S/C,Lego Icons,149.99,https://www.jb-spielwaren.de/en/lego-10357-shelby-cobra-427-s/c/a-10357/,2026-07-19
+JB Spielwaren,10358,LEGO 10358 Transformers: Soundwave,Lego Icons,134.99,https://www.jb-spielwaren.de/en/lego-10358-transformers-soundwave/a-10358/,2026-07-19
+JB Spielwaren,10367,LEGO 10367 The Lord of the Rings: Gandalf vs. Balrog,Lego Icons,101.99,https://www.jb-spielwaren.de/en/lego-10367-the-lord-of-the-rings-gandalf-vs-balrog/a-10367/,2026-07-19
+JB Spielwaren,40814,LEGO 40814 Baby Elephant in the Sky,Lego Icons,29.99,https://www.jb-spielwaren.de/en/lego-40814-baby-elephant-in-the-sky/a-40814/,2026-07-19
+JB Spielwaren,40690,LEGO 40690 Homage to the books of Jules Verne,Lego Icons,34.99,https://www.jb-spielwaren.de/en/lego-40690-homage-to-the-books-of-jules-verne/a-40690/,2026-07-19
+JB Spielwaren,40744,LEGO 40744 Christmas Ornament Selection,Lego Icons,11.04,https://www.jb-spielwaren.de/en/lego-40744-christmas-ornament-selection/a-40744/,2026-07-19
+JB Spielwaren,40721,LEGO 40721 Halloween Barn,Lego Icons,11.99,https://www.jb-spielwaren.de/en/lego-40721-halloween-barn/a-40721/,2026-07-19
+JB Spielwaren,40743,LEGO 40743 Christmas Table Decoration,Lego Icons,33.99,https://www.jb-spielwaren.de/en/lego-40743-christmas-table-decoration/a-40743/,2026-07-19
+JB Spielwaren,40813,LEGO 40813 Lucky Cat,Lego Icons,25.49,https://www.jb-spielwaren.de/en/lego-40813-lucky-cat/a-40813/,2026-07-19
+JB Spielwaren,10335,LEGO 10335 Endurance,Lego Icons,269.99,https://www.jb-spielwaren.de/en/lego-10335-endurance/a-10335/,2026-07-19
+JB Spielwaren,40821,LEGO 40821 love bears,Lego Icons,14.99,https://www.jb-spielwaren.de/en/lego-40821-love-bears/a-40821/,2026-07-19
+JB Spielwaren,40824,LEGO 40824 Love messenger Tweety,Lego Icons,29.74,https://www.jb-spielwaren.de/en/lego-40824-love-messenger-tweety/a-40824/,2026-07-19
+JB Spielwaren,,Spanish Fountain Garden with Spanish Assassin (Custom Minifigure),Lego Icons,94.38,https://www.jb-spielwaren.de/en/spanish-fountain-garden-with-spanish-assassin-custom-minifigure/a-648663843/,2026-07-19
+JB Spielwaren,10353,LEGO 10353 Williams Racing FW14B with Nigel Mansell,Lego Icons,67.99,https://www.jb-spielwaren.de/en/lego-10353-williams-racing-fw14b-with-nigel-mansell/a-10353/,2026-07-19
+JB Spielwaren,10359,LEGO 10359 Spanish fountain garden,Lego Icons,84.99,https://www.jb-spielwaren.de/en/lego-10359-spanish-fountain-garden/a-10359/,2026-07-19
+JB Spielwaren,10339,LEGO 10339 Santa's Post Office,Lego Icons,99.99,https://www.jb-spielwaren.de/en/lego-10339-santa-s-post-office/a-10339/,2026-07-19
+JB Spielwaren,10341,LEGO 10341 NASA Artemis launch pad,Lego Icons,220.99,https://www.jb-spielwaren.de/en/lego-10341-nasa-artemis-launch-pad/a-10341/,2026-07-19
+JB Spielwaren,10337,LEGO 10337 Lamborghini Countach 5000 Quattrovalvole,Lego Icons,125.99,https://www.jb-spielwaren.de/en/lego-10337-lamborghini-countach-5000-quattrovalvole/a-10337/,2026-07-19
+JB Spielwaren,40693,LEGO 40693 The Lord of the Rings™: Fell Beast™,Lego Icons,179.99,https://www.jb-spielwaren.de/en/lego-40693-the-lord-of-the-rings-fell-beast/a-40693/,2026-07-19
+JB Spielwaren,10334,LEGO 10334 Retro Portable Radio,Lego Icons,99.99,https://www.jb-spielwaren.de/en/lego-10334-retro-portable-radio/a-10334/,2026-07-19
+JB Spielwaren,10332,LEGO 10332 Medieval Town Square,Lego Icons,229.99,https://www.jb-spielwaren.de/en/lego-10332-medieval-town-square/a-10332/,2026-07-19
+JB Spielwaren,10330,LEGO 10330 McLaren MP4/4 & Ayrton Senna,Lego Icons,67.99,https://www.jb-spielwaren.de/en/lego-10330-mclaren-mp4/4-ayrton-senna/a-10330/,2026-07-19
+JB Spielwaren,40681,LEGO 40681 Retro Food Truck,Lego Icons,39.99,https://www.jb-spielwaren.de/en/lego-40681-retro-food-truck/a-40681/,2026-07-19
+JB Spielwaren,60506,LEGO 60506 Classic Beach Streetcar,Lego City,59.49,https://www.jb-spielwaren.de/en/lego-60506-classic-beach-streetcar/a-60506/,2026-07-19
+JB Spielwaren,60511,LEGO 60511 Vintage Steam Train,Lego City,76.49,https://www.jb-spielwaren.de/en/lego-60511-vintage-steam-train/a-60511/,2026-07-19
+JB Spielwaren,60494,LEGO 60494 Dump Truck & Front End Loader,Lego City,101.99,https://www.jb-spielwaren.de/en/lego-60494-dump-truck-front-end-loader/a-60494/,2026-07-19
+JB Spielwaren,60492,LEGO 60492 Passenger Jet,Lego City,25.49,https://www.jb-spielwaren.de/en/lego-60492-passenger-jet/a-60492/,2026-07-19
+JB Spielwaren,60480,LEGO 60480 Yellow Backhoe Loader,Lego City,25.49,https://www.jb-spielwaren.de/en/lego-60480-yellow-backhoe-loader/a-60480/,2026-07-19
+JB Spielwaren,60497,LEGO 60497 Drive-Through Car Wash,Lego City,46.74,https://www.jb-spielwaren.de/en/lego-60497-drive-through-car-wash/a-60497/,2026-07-19
+JB Spielwaren,60496,LEGO 60496 Pizza Delivery Experience with Vehicles,Lego City,42.49,https://www.jb-spielwaren.de/en/lego-60496-pizza-delivery-experience-with-vehicles/a-60496/,2026-07-19
+JB Spielwaren,60510,LEGO 60510 Advent Calendar 2026,Lego City,22.94,https://www.jb-spielwaren.de/en/lego-60510-advent-calendar-2026/a-60510/,2026-07-19
+JB Spielwaren,60508,LEGO 60508 Police Train Heist,Lego City,169.99,https://www.jb-spielwaren.de/en/lego-60508-police-train-heist/a-60508/,2026-07-19
+JB Spielwaren,60493,LEGO 60493 F1® Truck with Audi F1® race car,Lego City,38.24,https://www.jb-spielwaren.de/en/lego-60493-f1-truck-with-audi-f1-race-car/a-60493/,2026-07-19
+JB Spielwaren,60484,LEGO 60484 Rides – Gaming Race Car,Lego City,8.49,https://www.jb-spielwaren.de/en/lego-60484-rides-gaming-race-car/a-60484/,2026-07-19
+JB Spielwaren,60482,LEGO 60482 Rides – Fire Truck,Lego City,8.49,https://www.jb-spielwaren.de/en/lego-60482-rides-fire-truck/a-60482/,2026-07-19
+JB Spielwaren,60483,LEGO 60483 Rides – Construction Loader,Lego City,8.49,https://www.jb-spielwaren.de/en/lego-60483-rides-construction-loader/a-60483/,2026-07-19
+JB Spielwaren,60504,LEGO 60504 Coast Guard Rescue Boat & Helicopter,Lego City,87.99,https://www.jb-spielwaren.de/en/lego-60504-coast-guard-rescue-boat-helicopter/a-60504/,2026-07-19
+JB Spielwaren,60481,LEGO 60481 Rides – Police Truck,Lego City,8.49,https://www.jb-spielwaren.de/en/lego-60481-rides-police-truck/a-60481/,2026-07-19
+JB Spielwaren,60505,"LEGO 60505 Airplane, Service Truck & Hovercraft Remix",Lego City,55.99,https://www.jb-spielwaren.de/en/lego-60505-airplane-service-truck-hovercraft-remix/a-60505/,2026-07-19
+JB Spielwaren,60479,LEGO 60479 Police Prisoner Transport Van,Lego City,16.99,https://www.jb-spielwaren.de/en/lego-60479-police-prisoner-transport-van/a-60479/,2026-07-19
+JB Spielwaren,60503,LEGO 60503 Coast Guard Helicopter,Lego City,41.99,https://www.jb-spielwaren.de/en/lego-60503-coast-guard-helicopter/a-60503/,2026-07-19
+JB Spielwaren,60498,LEGO 60498 Tractor,Lego City,16.99,https://www.jb-spielwaren.de/en/lego-60498-tractor/a-60498/,2026-07-19
+JB Spielwaren,60491,LEGO 60491 Motorcycle Transporter,Lego City,16.99,https://www.jb-spielwaren.de/en/lego-60491-motorcycle-transporter/a-60491/,2026-07-19

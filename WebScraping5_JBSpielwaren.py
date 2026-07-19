@@ -14,7 +14,7 @@ from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 from selenium.webdriver.chrome.service import Service
 from urllib.parse import urlparse
-
+from datetime import datetime
 
 def extract_category(url, soup):
     breadcrumb = soup.select_one('span.breadcrumb--title, span[itemprop="name"]')
@@ -85,7 +85,8 @@ def scrape_jb_spielwaren(url):
                     "category": category,
                     "name": name,
                     "price": price_text,
-                    "url": href
+                    "url": href,
+                    "collection_date": datetime.now().strftime("%Y-%m-%d"),
                 })
 
         return pd.DataFrame(products)

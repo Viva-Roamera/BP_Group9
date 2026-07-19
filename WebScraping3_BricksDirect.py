@@ -26,6 +26,7 @@ from pathlib import Path
 
 import requests
 from bs4 import BeautifulSoup
+from datetime import datetime
 
 # ----------------------------------------------------------------------
 # CONFIG 
@@ -146,6 +147,7 @@ def parse_products(soup: BeautifulSoup) -> list[dict]:
                 "price": price,
                 "currency": currency,
                 "url": product_url,
+                "collection_date": datetime.now().strftime("%Y-%m-%d"),
             }
         )
 
@@ -208,7 +210,7 @@ def save_to_csv(products: list[dict], output_path: str) -> None:
     out_path = Path(output_path)
     out_path.parent.mkdir(parents=True, exist_ok=True)
 
-    fieldnames = ["category", "name", "price", "currency", "url"]
+    fieldnames = ["category", "name", "price", "currency", "url", "collection_date"]
     with out_path.open("w", newline="", encoding="utf-8-sig") as f:
         writer = csv.DictWriter(f, fieldnames=fieldnames)
         writer.writeheader()

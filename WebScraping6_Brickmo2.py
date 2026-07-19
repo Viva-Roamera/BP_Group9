@@ -10,7 +10,7 @@ import requests
 import pandas as pd
 from bs4 import BeautifulSoup
 from urllib.parse import urljoin, urlparse
-
+from datetime import datetime
 
 def extract_category(url, soup):
     # Primary: derive the category straight from the URL slug.
@@ -104,8 +104,9 @@ def scrape_page(url):
                     "category": category,
                     "name": name.get_text(strip=True),
                     "price": price_text,
-                    "pieces": pieces_text,
-                    "url": name["href"]
+                    ##"pieces": pieces_text,
+                    "url": name["href"],
+                    "collection_date": datetime.now().strftime("%Y-%m-%d"),
                 })
 
         next_page = None
