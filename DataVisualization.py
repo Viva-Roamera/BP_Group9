@@ -39,35 +39,39 @@ if not OUTPUT_XLSX.exists():
         f"Workbook not found at {OUTPUT_XLSX}. Run PriceComparisonAnalysis.py first."
     )
 
-# Read the already-computed (and recalculated) comparison table
+# Load the workbook and read the Raw Data sheet, which contains the actual
+# price listings used for the comparison and charts.
 wb = openpyxl.load_workbook(OUTPUT_XLSX, data_only=True)
-ws = wb["PriceComparison"]
-rows = list(ws.iter_rows(min_row=2, values_only=True))
-cmp_df = pd.DataFrame(rows, columns=[
-    "ProductID", "ProductName", "Category",
-    "LowestPrice", "LowestShop", "HighestPrice", "HighestShop",
-    "PriceDiff", "NumShops",
-])
-
-# Also load the cleaned Raw Data (for category-level price range across ALL
-# listings, not just the min/max already summarized per product)
 ws_raw = wb["Raw Data"]
 raw_rows = list(ws_raw.iter_rows(min_row=2, values_only=True))
 raw_df = pd.DataFrame(raw_rows, columns=["shop", "ProductID", "category", "name", "price"])
 
+# Clean and normalize the raw data so the charts can be computed reliably.
+raw_df["price"] = pd.to_numeric(raw_df["price"], errors="coerce")
+raw_df = raw_df.dropna(subset=["price"]).copy()
+raw_df["shop"] = raw_df["shop"].astype(str).str.strip()
+raw_df["ProductID"] = pd.to_numeric(raw_df["ProductID"], errors="coerce")
+raw_df = raw_df.dropna(subset=["ProductID"]).copy()
+raw_df["ProductID"] = raw_df["ProductID"].astype(int)
+
 # ---------------------------------------------------------------------------
 # CHART 1: Lowest Price Wins
-# Only products carried by 2+ shops are meaningful for a "who's cheaper" count
-# (a single-shop product trivially "wins" by default, which would just be
-# noise reflecting how many products each shop happens to list).
+# Count products where each shop offered the lowest price among the shops
+# that listed that product. Only products carried by 2+ shops are included.
 # ---------------------------------------------------------------------------
-multi_shop = cmp_df[cmp_df["NumShops"] > 1]
-wins = multi_shop["LowestShop"].value_counts()
+shared_products = raw_df.groupby("ProductID").filter(lambda g: g["shop"].nunique() > 1)
 
-# Make sure every shop that appears anywhere in the data shows on the chart,
-# even if it never won on a shared product (so it isn't silently omitted).
-all_shops = sorted(raw_df["shop"].unique())
-wins = wins.reindex(all_shops, fill_value=0).sort_values(ascending=False)
+if shared_products.empty:
+    wins = pd.Series(0, index=sorted(raw_df["shop"].unique()), dtype=int)
+else:
+    winner_per_product = (
+        shared_products.sort_values(["ProductID", "price"])
+        .groupby("ProductID", as_index=False)
+        .first()
+    )
+    wins = winner_per_product["shop"].value_counts()
+    all_shops = sorted(raw_df["shop"].unique())
+    wins = wins.reindex(all_shops, fill_value=0).sort_values(ascending=False)
 
 fig, ax = plt.subplots(figsize=(8, 6))
 colors = plt.cm.tab10.colors
@@ -78,10 +82,10 @@ for bar, val in zip(bars, wins.values):
 
 ax.set_title(
     f"Number of Sets Where Shop Had the Lowest Price\n"
-    f"(out of {len(multi_shop)} sets sold by 2+ shops)"
+    f"(out of {shared_products['ProductID'].nunique()} sets sold by 2+ shops)"
 )
 ax.set_ylabel("Sets won (lowest price)")
-ax.set_ylim(0, max(wins.values) * 1.2 if wins.values.max() > 0 else 1)
+ax.set_ylim(0, max(wins.values) * 1.2 if len(wins) and wins.values.max() > 0 else 1)
 plt.tight_layout()
 plt.savefig(CHART1_PATH, dpi=150)
 plt.close()
@@ -115,3 +119,64 @@ plt.savefig(CHART2_PATH, dpi=150)
 plt.close()
 print(f"Saved: {CHART2_PATH}")
 print(cat_range)
+
+# ==========================================================
+# CHART 3
+# Price comparison for products available in 2+ shops
+# ==========================================================
+
+# Pivot on ProductID ONLY — name text can differ slightly between shops
+comparison = (
+    raw_df.pivot_table(
+        index="ProductID",
+        columns="shop",
+        values="price",
+        aggfunc="min"
+    )
+    .reset_index()
+)
+
+# Attach one representative name per ProductID (first non-null name seen)
+name_lookup = (
+    raw_df.dropna(subset=["name"])
+    .drop_duplicates(subset=["ProductID"])
+    .set_index("ProductID")["name"]
+)
+comparison["name"] = comparison["ProductID"].map(name_lookup)
+
+shop_columns = [c for c in comparison.columns if c not in {"ProductID", "name"}]
+
+comparison["ShopCount"] = comparison[shop_columns].notna().sum(axis=1)
+comparison_2shops = comparison[comparison["ShopCount"] >= 2].copy()
+
+if comparison_2shops.empty:
+    print("No products with data in 2+ shops — skipping Chart 3.")
+    CHART3_PATH = None
+else:
+    comparison_2shops["PriceGap"] = (
+        comparison_2shops[shop_columns].max(axis=1)
+        - comparison_2shops[shop_columns].min(axis=1)
+    )
+    comparison_2shops["Cheapest Shop"] = comparison_2shops[shop_columns].idxmin(axis=1)
+    comparison_2shops["Most Expensive Shop"] = comparison_2shops[shop_columns].idxmax(axis=1)
+
+    chart3_data = comparison_2shops.nlargest(20, "PriceGap").copy()
+    chart3_data = chart3_data.set_index("name")
+
+    fig, ax = plt.subplots(figsize=(18, 8))
+    chart3_data[shop_columns].plot(kind="bar", ax=ax, width=0.8)
+    ax.set_title("Top 20 Products by Price Gap (Available in 2+ Shops)")
+    ax.set_xlabel("Product")
+    ax.set_ylabel("Price (€)")
+    ax.legend(title="Shop", bbox_to_anchor=(1.02, 1))
+    plt.tight_layout()
+
+    CHART3_PATH = OUTPUT_DIR / "price_comparison_2plus_shops.png"
+    plt.savefig(CHART3_PATH, dpi=300, bbox_inches="tight")
+    plt.close()
+
+    print(f"Saved: {CHART3_PATH}")
+
+    TABLE_PATH = OUTPUT_DIR / "price_comparison_2plus_shops.xlsx"
+    chart3_data[shop_columns + ["ShopCount", "PriceGap", "Cheapest Shop", "Most Expensive Shop"]].to_excel(TABLE_PATH)
+    print(f"Saved table: {TABLE_PATH}")

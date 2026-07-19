@@ -50,13 +50,6 @@ before = len(df)
 df = df.dropna(subset=["ProductID"])
 print(f"Dropped {before - len(df)} rows with missing ProductID")
 
-# --- Exclude Zavvi rows: prices are in GBP (£) while every other shop is in
-#     EUR (€), and category is missing for these rows. Mixing currencies
-#     without a conversion rate would silently corrupt the comparison, so
-#     these 2 rows are excluded rather than guessed at. ---
-before = len(df)
-df = df[df["shop"].str.lower() != "zavvi"]
-print(f"Dropped {before - len(df)} Zavvi rows (GBP currency, not comparable to EUR prices)")
 
 # --- Clean price column: strip currency symbols/whitespace, convert to float ---
 df["price"] = (
@@ -170,9 +163,10 @@ ws.auto_filter.ref = f"A1:I{last_cmp_row}"
 # Note documenting exclusions/assumptions, placed just below the table
 note_row = last_cmp_row + 2
 ws.cell(row=note_row, column=1, value=(
-    "Note: Zavvi (2 rows, GBP prices, no category) and 1 row with a missing "
-    "ProductID were excluded from this analysis. 48 exact duplicate rows "
-    "(Brickmo) were also removed. See 'Raw Data' tab for the cleaned dataset."
+    "Note: 1 row with a missing ProductID was excluded from this analysis. "
+    "48 exact duplicate rows (Brickmo) were also removed. Zavvi rows are "
+    "included because their prices are converted to EUR in the scraper. "
+    "See 'Raw Data' tab for the cleaned dataset."
 )).font = Font(italic=True, size=9, name="Arial")
 
 wb.save(OUTPUT_XLSX)
