@@ -44,7 +44,7 @@ python3 main.py                 # collect price data, cleanse, analyze, build ch
 ```
 
 ## Data collected per observation
-`product_id, name, category, shop, url, price`
+`product_id, name, category, shop, url, price, collection_date`
 
 Product names include the official LEGO set number (e.g. "LEGO Star Wars
 Millennium Falcon (75192)") — used purely as a factual product
