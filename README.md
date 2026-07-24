@@ -16,7 +16,7 @@ and make Cloud9 toy retailer's LEGO offering more competitive.
 
 ## Project structure
 ```
-lego_price_tracker/BP_GROUP9
+Lego_price_tracker/BP_Group9
 ├── main.py                 # runs the full pipeline end-to-end
 ├── WebScraping             # 4 shops with LEGO in the offerings
 │   ├── WebScraping2.py     # scraping prices from Zavvi
@@ -32,7 +32,7 @@ lego_price_tracker/BP_GROUP9
 │   ├── price_comparison_report.xlsx        # price comparison between shops in excel .xlsx format
 │   ├── lowest_price_wins.png               # chart 1
 │   └── price_comparison_2plus_shops.png    # chart 2
-└── LEGO_Price_Report.docx              # final business report (to be uploaded from OneDrive)
+└── LEGO_Price_Report.docx              	# final business report 
 ```
 
 ## How to run
