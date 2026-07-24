@@ -92,33 +92,33 @@ plt.close()
 print(f"Saved: {CHART1_PATH}")
 print(wins)
 
-# ---------------------------------------------------------------------------
-# CHART 2: Price Range by Category
-# For each category: overall lowest price and overall highest price seen
-# across all shops/listings in that category.
-# ---------------------------------------------------------------------------
-cat_range = raw_df.groupby("category")["price"].agg(["min", "max"]).reset_index()
-cat_range = cat_range.sort_values("max", ascending=True)
+# # ---------------------------------------------------------------------------
+# # CHART 2: Price Range by Category
+# # For each category: overall lowest price and overall highest price seen
+# # across all shops/listings in that category.
+# # ---------------------------------------------------------------------------
+# cat_range = raw_df.groupby("category")["price"].agg(["min", "max"]).reset_index()
+# cat_range = cat_range.sort_values("max", ascending=True)
 
-fig, ax = plt.subplots(figsize=(8, max(4, 0.5 * len(cat_range) + 1.5)))
-y_pos = np.arange(len(cat_range))
+# fig, ax = plt.subplots(figsize=(8, max(4, 0.5 * len(cat_range) + 1.5)))
+# y_pos = np.arange(len(cat_range))
 
-ax.hlines(y=y_pos, xmin=cat_range["min"], xmax=cat_range["max"],
-          color="lightgray", linewidth=4, zorder=1)
-ax.scatter(cat_range["min"], y_pos, color="#2e7d32", s=90, zorder=2, label="Lowest price")
-ax.scatter(cat_range["max"], y_pos, color="#e35d40", s=90, zorder=2, label="Highest price")
+# ax.hlines(y=y_pos, xmin=cat_range["min"], xmax=cat_range["max"],
+#           color="lightgray", linewidth=4, zorder=1)
+# ax.scatter(cat_range["min"], y_pos, color="#2e7d32", s=90, zorder=2, label="Lowest price")
+# ax.scatter(cat_range["max"], y_pos, color="#e35d40", s=90, zorder=2, label="Highest price")
 
-ax.set_yticks(y_pos)
-ax.set_yticklabels(cat_range["category"])
-ax.set_xlabel("Price (\u20ac)")
-ax.set_title("Price Range by Category\n(lowest -> highest, across all shops)")
-ax.legend(loc="lower right")
-ax.set_xlim(left=0)
-plt.tight_layout()
-plt.savefig(CHART2_PATH, dpi=150)
-plt.close()
-print(f"Saved: {CHART2_PATH}")
-print(cat_range)
+# ax.set_yticks(y_pos)
+# ax.set_yticklabels(cat_range["category"])
+# ax.set_xlabel("Price (\u20ac)")
+# ax.set_title("Price Range by Category\n(lowest -> highest, across all shops)")
+# ax.legend(loc="lower right")
+# ax.set_xlim(left=0)
+# plt.tight_layout()
+# plt.savefig(CHART2_PATH, dpi=150)
+# plt.close()
+# print(f"Saved: {CHART2_PATH}")
+# print(cat_range)
 
 # ==========================================================
 # CHART 3
