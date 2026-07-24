@@ -1,5 +1,5 @@
 """
-## Iva - TEST Brickmo (WebScraping4) extended product themes + Category - product price scraper
+## Brickmo (WebScraping4) extended product themes + Category - product price scraper
 Output: brickmo2_prices.csv
 Note: Need to install the following packages if not already installed:
     pip install pandas beautifulsoup4 requests

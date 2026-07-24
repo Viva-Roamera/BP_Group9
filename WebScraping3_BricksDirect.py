@@ -3,17 +3,14 @@
 Note: Need to install the following packages if not already installed:
     pip install pandas beautifulsoup4 requests
 ============================================
-Scrapes product name + price from listing/category pages on
-https://bricksdirect.com/
-
-Price is read from:
-    <span class="price product-price" aria-label="Price"> €22.80 </span>
-
 Responsible scraping:
+  - Checks bricksdirect.com/robots.txt before scraping each start URL and
+    skips any URL that's disallowed for our user agent.
   - CRAWL_DELAY_SECONDS is set to 10 seconds between requests, as defined in bricksdirect.com/robots.txt
     first.
   - Only reads publicly listed catalog/category pages (GET requests).
   - Sends a normal browser User-Agent; does not bypass any login/paywall.
+  - Only collects public product/price data - no personal data of any kind.
 
 Output:
   - CSV file written to OUTPUT_PATH: bricksdirect_prices.csv
@@ -23,6 +20,8 @@ import csv
 import re
 import time
 from pathlib import Path
+from urllib.parse import urlparse
+from urllib.robotparser import RobotFileParser
 
 import requests
 from bs4 import BeautifulSoup
@@ -32,11 +31,10 @@ from datetime import datetime
 # CONFIG 
 # ----------------------------------------------------------------------
 START_URLS = [
-    "https://bricksdirect.com/lego-city", "https://bricksdirect.com/lego-star-wars", "https://bricksdirect.com/lego-friends"
-    # Add more category/listing page URLs here, e.g.:
-    # "https://bricksdirect.com/collections/lego-star-wars",
+    "https://bricksdirect.ie/lego-city", "https://bricksdirect.ie/lego-star-wars", "https://bricksdirect.ie/lego-friends" 
+    # Add more category/listing page URLs here, e.g.: "https://bricksdirect.ie/lego-city"
 ]
-MAX_PAGES_PER_CATEGORY = 5       # how many paginated pages to follow per start URL
+MAX_PAGES_PER_CATEGORY = 3       # how many paginated pages to follow per start URL
 CRAWL_DELAY_SECONDS = 10.0       # required delay between requests
 
 # Save the CSV in the same folder as this script, whatever machine it runs on.
@@ -49,7 +47,39 @@ HEADERS = {
         "(KHTML, like Gecko) Chrome/125.0.0.0 Safari/537.36"
     ),
     "Accept-Language": "en-IE,en;q=0.9",
+    "Accept-Currency": "EUR",
 }
+
+# Cache of RobotFileParser objects per domain, so we only fetch/parse
+# robots.txt once even though we check it for multiple start URLs.
+_ROBOTS_CACHE: dict[str, RobotFileParser] = {}
+
+def is_allowed_by_robots(url: str, user_agent: str = "*") -> bool:
+    """
+    Check robots.txt for the given URL's domain before scraping.
+    Returns True if scraping this URL is allowed, False otherwise.
+    Fails safe: if robots.txt cannot be read, treat as disallowed
+    and let the caller decide (here we default to skipping).
+    """
+    parsed = urlparse(url)
+    domain = f"{parsed.scheme}://{parsed.netloc}"
+
+    rp = _ROBOTS_CACHE.get(domain)
+    if rp is None:
+        robots_url = f"{domain}/robots.txt"
+        rp = RobotFileParser()
+        rp.set_url(robots_url)
+        try:
+            rp.read()
+        except Exception as e:
+            print(f"  Could not read robots.txt at {robots_url}: {e}")
+            return False  # fail safe - don't scrape if we can't verify permission
+        _ROBOTS_CACHE[domain] = rp
+
+    allowed = rp.can_fetch(user_agent, url)
+    if not allowed:
+        print(f"  robots.txt disallows scraping: {url}")
+    return allowed
 
 
 def get_soup(url: str, session: requests.Session) -> BeautifulSoup | None:
@@ -109,7 +139,7 @@ def parse_products(soup: BeautifulSoup) -> list[dict]:
             card = price_span.parent
 
         # Product name/link: BricksDirect product cards use a pattern like
-        #   <a href="https://bricksdirect.com/lego-77261-ferrari-499p"
+        #   <a href="https://bricksdirect.ie/lego-77261-ferrari-499p"
         #      title="LEGO 77261 Ferrari 499P">LEGO 77261 Ferrari 499P</a>
         # Prefer this a[title][href] link since both its `title` attribute
         # and its text give a clean product name.
@@ -138,7 +168,7 @@ def parse_products(soup: BeautifulSoup) -> list[dict]:
 
         product_url = link_tag["href"] if link_tag else None
         if product_url and product_url.startswith("/"):
-            product_url = "https://bricksdirect.com" + product_url
+            product_url = "https://bricksdirect.ie" + product_url
 
         products.append(
             {
@@ -161,7 +191,7 @@ def find_next_page_url(soup: BeautifulSoup, current_url: str) -> str | None:
     if next_link and next_link.get("href"):
         href = next_link["href"]
         if href.startswith("/"):
-            return "https://bricksdirect.com" + href
+            return "https://bricksdirect.ie" + href
         return href
     return None
 
@@ -172,8 +202,19 @@ def scrape_all() -> list[dict]:
 
     with requests.Session() as session:
         for start_url in START_URLS:
+            # Check robots.txt before scraping this category at all
+            if not is_allowed_by_robots(start_url):
+                print(f"Skipping (robots.txt disallows): {start_url}")
+                continue
+
             url = start_url
             for page_num in range(1, MAX_PAGES_PER_CATEGORY + 1):
+                # Re-check each paginated URL too, in case robots.txt
+                # disallows specific query strings/paths.
+                if not is_allowed_by_robots(url):
+                    print(f"  Skipping page (robots.txt disallows): {url}")
+                    break
+
                 print(f"Fetching page {page_num} of {start_url}: {url}")
                 soup = get_soup(url, session)
                 if soup is None:

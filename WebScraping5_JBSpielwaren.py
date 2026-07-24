@@ -4,7 +4,14 @@ Output: jb_spielwaren_prices.csv
 Note: Need to install the following packages if not already installed:
     pip install pandas beautifulsoup4 selenium
 ============================================
+
+Responsible scraping practices implemented:
+- Checks robots.txt before scraping each URL and skips disallowed paths
+- Random pause between requests to avoid hammering the server
+- Only collects public product/price data - no personal data of any kind
 """
+import time
+import random
 import pandas as pd
 from bs4 import BeautifulSoup
 from selenium import webdriver
@@ -14,7 +21,44 @@ from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 from selenium.webdriver.chrome.service import Service
 from urllib.parse import urlparse
+from urllib.robotparser import RobotFileParser
 from datetime import datetime
+
+# ---- Responsible scraping settings ----
+MIN_DELAY_SECONDS = 3   # minimum pause between requests
+MAX_DELAY_SECONDS = 7   # maximum pause between requests
+
+
+def is_allowed_by_robots(url, user_agent="*"):
+    """
+    Check robots.txt for the given URL's domain before scraping.
+    Returns True if scraping this URL is allowed, False otherwise.
+    Fails safe: if robots.txt cannot be read, treat as disallowed
+    and let the caller decide (here we default to skipping).
+    """
+    parsed = urlparse(url)
+    robots_url = f"{parsed.scheme}://{parsed.netloc}/robots.txt"
+
+    rp = RobotFileParser()
+    rp.set_url(robots_url)
+    try:
+        rp.read()
+    except Exception as e:
+        print(f"  Could not read robots.txt at {robots_url}: {e}")
+        return False  # fail safe - don't scrape if we can't verify permission
+
+    allowed = rp.can_fetch(user_agent, url)
+    if not allowed:
+        print(f"  robots.txt disallows scraping: {url}")
+    return allowed
+
+
+def polite_pause():
+    """Random pause between requests to avoid overloading the server."""
+    delay = random.uniform(MIN_DELAY_SECONDS, MAX_DELAY_SECONDS)
+    print(f"  Pausing {delay:.1f}s before next request...")
+    time.sleep(delay)
+
 
 def extract_category(url, soup):
     breadcrumb = soup.select_one('span.breadcrumb--title, span[itemprop="name"]')
@@ -33,6 +77,10 @@ def extract_category(url, soup):
 
 
 def scrape_jb_spielwaren(url):
+    # Check robots.txt before doing anything else
+    if not is_allowed_by_robots(url):
+        print(f"Skipping (robots.txt disallows): {url}")
+        return pd.DataFrame()
 
     options = Options()
     options.add_argument("--headless=new")
@@ -103,9 +151,14 @@ if __name__ == "__main__":
     ]
 
     all_products = []
-    for url in START_URLS:
+    for i, url in enumerate(START_URLS):
+        print(f"Scraping ({i+1}/{len(START_URLS)}): {url}")
         df = scrape_jb_spielwaren(url)
         all_products.append(df)
+
+        # Pause between requests, but not after the very last one
+        if i < len(START_URLS) - 1:
+            polite_pause()
 
     combined_df = pd.concat(all_products, ignore_index=True) if all_products else pd.DataFrame()
 
