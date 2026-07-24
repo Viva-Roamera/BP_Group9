@@ -3,11 +3,10 @@
 A Python automation that collects, stores, and compares competitor
 prices across 3 online toy shops for minimum 20 popular LEGO products, and produces
 a business report with tables and charts to support pricing decisions
-and make a toy retailer's LEGO offering more competitive.
+and make Cloud9 toy retailer's LEGO offering more competitive.
 
 ## Business area
-**Toy Retailing — LEGO Sets**, spanning Star Wars, Icons,
-City, Ninjago.
+**Toy Retailing — LEGO Sets**, spanning Star Wars, Icons, City, Friends.
 
 ## Shops monitored
 - Brickmo
@@ -22,19 +21,18 @@ lego_price_tracker/BP_GROUP9
 ├── WebScraping             # 4 shops with LEGO in the offerings
 │   ├── WebScraping2.py     # scraping prices from Zavvi
 │   ├── WebScraping3.py     # scraping prices from BricksDirect
-│   ├── WebScraping4.py     # scraping prices from Brickmo
 │   ├── WebScraping5.py     # scraping prices from JB Spielwaren
 │   └── WebScraping6.py     # scraping prices from Brickmo with extended products + category
 ├── DataCleansing.py        # cleanse and normalize raw data, create ProductID into staging files
 ├── PriceComparison.py      # price comparison: lowest/highest price, gaps --> extract excel output
 ├── DataVisualization.py    # create matplotlib charts 
 ├── staging                 # store staging files from DataCleansing.py
-└── outputs
-    ├── master_product_list.csv             # consolidated price from all shops
-    ├── price_comparison_report.xlsx        # price comparison between shops in excel format
-    ├── lowest_price_wins.png               # chart 1
-    ├── price_range_by_category.png         # chart 2
-    └── LEGO_Price_Report.docx              # final business report (to be uploaded from OneDrive)
+├── outputs
+│   ├── master_product_list.csv             # consolidated price from all shops
+│   ├── price_comparison_report.xlsx        # price comparison between shops in excel .xlsx format
+│   ├── lowest_price_wins.png               # chart 1
+│   └── price_comparison_2plus_shops.png    # chart 2
+└── LEGO_Price_Report.docx              # final business report (to be uploaded from OneDrive)
 ```
 
 ## How to run
@@ -44,7 +42,7 @@ python3 main.py                 # collect price data, cleanse, analyze, build ch
 ```
 
 ## Data collected per observation
-`product_id, name, category, shop, url, price, collection_date`
+`name, category, shop, price, url, collection_date`
 
 Product names include the official LEGO set number (e.g. "LEGO Star Wars
 Millennium Falcon (75192)") — used purely as a factual product
@@ -66,4 +64,4 @@ sponsored by, or endorsed by the LEGO Group.
 ## Output
 - **CSV** — portable raw data exports
 - **Excel** (`price_comparison_report.xlsx`) — Raw Data, Price Comparison sheets
-- **Word report** (`LEGO_Price_Report.docx`) — Project title; Group members; Selected option; Business problem; Solution developed; Main features; Technologies or tools used; Screenshots; Testing evidence; Limitations and future improvements; AI-use statement, if AI tools were used.
+- **Word report** (`LEGO_Competitor_Price_Report.docx`) — Project title; Group members; Selected option; Business problem; Solution developed; Main features; Technologies or tools used; Screenshots; Testing evidence; Limitations and future improvements; AI-use statement, if AI tools were used.
