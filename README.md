@@ -33,7 +33,7 @@ lego_price_tracker/BP_GROUP9
     ├── price_comparison_report.xlsx        # price comparison between shops in excel format
     ├── lowest_price_wins.png               # chart 1
     ├── price_range_by_category.png         # chart 2
-    └── LEGO_Price_Report.docx              # final business report (to be uploaded from OneDrive)
+    └── LEGO_Price_Report.docx              # final business report
 ```
 
 ## How to run
