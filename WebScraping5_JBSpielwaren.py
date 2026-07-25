@@ -3,6 +3,11 @@
 Output: jb_spielwaren_prices.csv
 Note: Need to install the following packages if not already installed:
     pip install pandas beautifulsoup4 selenium
+
+Responsible scraping:
+  - Loads robots.txt and checks every category URL before requesting it.
+  - Uses at least 10 seconds between category requests.
+  - Transparently identifies this educational project.
 ============================================
 """
 import pandas as pd
@@ -15,6 +20,12 @@ from selenium.webdriver.support import expected_conditions as EC
 from selenium.webdriver.chrome.service import Service
 from urllib.parse import urlparse
 from datetime import datetime
+
+from scraping_policy import RobotsPolicy, USER_AGENT
+
+
+DOMAIN = "https://www.jb-spielwaren.de"
+
 
 def extract_category(url, soup):
     breadcrumb = soup.select_one('span.breadcrumb--title, span[itemprop="name"]')
@@ -32,16 +43,20 @@ def extract_category(url, soup):
     return ""
 
 
-def scrape_jb_spielwaren(url):
+def scrape_jb_spielwaren(url, policy):
+    if not policy.can_fetch(url):
+        return pd.DataFrame()
 
     options = Options()
     options.add_argument("--headless=new")
     options.add_argument("--disable-gpu")
     options.add_argument("--no-sandbox")
     options.add_argument("--window-size=1920,1080")
+    options.add_argument(f"--user-agent={USER_AGENT}")
 
     driver = webdriver.Chrome(service=Service(), options=options)
     try:
+        policy.wait_before_request()
         driver.get(url)
         WebDriverWait(driver, 20).until(
             EC.presence_of_element_located((By.CSS_SELECTOR, "a.thumb-title.small, a.thumb-title"))
@@ -103,8 +118,9 @@ if __name__ == "__main__":
     ]
 
     all_products = []
+    policy = RobotsPolicy(DOMAIN)
     for url in START_URLS:
-        df = scrape_jb_spielwaren(url)
+        df = scrape_jb_spielwaren(url, policy)
         all_products.append(df)
 
     combined_df = pd.concat(all_products, ignore_index=True) if all_products else pd.DataFrame()

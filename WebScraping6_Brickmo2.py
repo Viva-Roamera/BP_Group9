@@ -18,53 +18,16 @@ pip install pandas beautifulsoup4 requests
 
 import requests
 import pandas as pd
-import time
 
 from bs4 import BeautifulSoup
 from urllib.parse import urljoin, urlparse
-from urllib.robotparser import RobotFileParser
 from datetime import datetime
 
+from scraping_policy import RobotsPolicy, USER_AGENT
 
 DOMAIN = "https://www.brickmo.com"
 
-CRAWL_DELAY_SECONDS = 2
-
-
-HEADERS = {
-    "User-Agent": (
-        "Mozilla/5.0 (Windows NT 10.0; Win64; x64) "
-        "AppleWebKit/537.36 (KHTML, like Gecko) "
-        "Chrome/137.0 Safari/537.36"
-    )
-}
-
-
-
-def get_robots_parser(domain):
-    """
-    Load and parse robots.txt.
-    """
-
-    print("Loading robots.txt...")
-
-    robots_url = f"{domain}/robots.txt"
-
-    response = requests.get(
-        robots_url,
-        headers=HEADERS,
-        timeout=10
-    )
-
-    response.raise_for_status()
-
-    rp = RobotFileParser()
-
-    rp.parse(response.text.splitlines())
-
-    print("robots.txt loaded successfully.")
-
-    return rp
+HEADERS = {"User-Agent": USER_AGENT}
 
 
 
@@ -123,27 +86,7 @@ def extract_category(url, soup):
 
 
 
-def scrape_page(url, rp):
-
-    # Check robots.txt before scraping
-
-    can_scrape = rp.can_fetch(
-        HEADERS["User-Agent"],
-        url
-    )
-
-    print("Can scrape:", can_scrape)
-
-
-    if not can_scrape:
-
-        print(
-            f"Scraping not allowed by robots.txt: {url}"
-        )
-
-        return []
-
-
+def scrape_page(url, policy):
     products = []
 
     page_url = url
@@ -160,15 +103,11 @@ def scrape_page(url, rp):
 
         seen_pages.add(page_url)
 
+        # Pagination URLs can have different robots rules, so check every page.
+        if not policy.can_fetch(page_url):
+            break
 
-        # Ethical crawling delay
-        print(
-            f"Waiting {CRAWL_DELAY_SECONDS} seconds..."
-        )
-
-        time.sleep(CRAWL_DELAY_SECONDS)
-
-
+        policy.wait_before_request()
         response = requests.get(
             page_url,
             headers=HEADERS,
@@ -340,7 +279,7 @@ def scrape_page(url, rp):
 
 if __name__ == "__main__":
 
-    rp = get_robots_parser(DOMAIN)
+    policy = RobotsPolicy(DOMAIN)
 
     urls = [
         "https://www.brickmo.com/en/lego/lego-city/",
@@ -353,7 +292,7 @@ if __name__ == "__main__":
 
     for url in urls:
 
-        products = scrape_page(url, rp)
+        products = scrape_page(url, policy)
 
         all_products.extend(products)
 

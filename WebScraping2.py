@@ -3,16 +3,16 @@
 ## Limitations and future improvements on Zavvi: we identified Selenium/Playwright as a technical solution for JavaScript-rendered listings, but scoped it out given time constraints and chose manual curation instead.
 
 import requests
-from urllib.robotparser import RobotFileParser
 from bs4 import BeautifulSoup
-import time
 import csv
 from pathlib import Path
 from datetime import date
 
-HEADERS = {"User-Agent": "Mozilla/5.0 (Group9 student project; contact: https://github.com/Viva-Roamera/BP_Group9)"}
+from scraping_policy import RobotsPolicy, USER_AGENT
+
+
+HEADERS = {"User-Agent": USER_AGENT}
 DOMAIN = "https://www.zavvi.com"
-CRAWL_DELAY_SECONDS = 10.0  # Zavvi's robots.txt gives no Crawl-delay, so I chose a conservative default
 
 ZAVVI_PRODUCTS = [ 
     {"url": "https://www.zavvi.com/p/toys/lego-friends-horse-baby-foal-trailer-with-car-toy-42695/17650759/", "category": "Lego Friends"}, 
@@ -40,14 +40,6 @@ ZAVVI_PRODUCTS = [
 ]
 
 
-def get_zavvi_robots_parser():
-    rp = RobotFileParser()
-    rp.set_url(f"{DOMAIN}/robots.txt")
-    robots_response = requests.get(f"{DOMAIN}/robots.txt", headers=HEADERS, timeout=10)
-    rp.parse(robots_response.text.splitlines())
-    return rp
-
-
 def get_gbp_to_eur_rate() -> float:
     """Fetch today's GBP to EUR exchange rate from the European Central Bank via Frankfurter.app"""
     try:
@@ -59,12 +51,18 @@ def get_gbp_to_eur_rate() -> float:
         return 1.17  # approximate GBP->EUR rate as of mid-2026, documented fallback
 
 
-def scrape_zavvi_product(url: str, category: str, rp: RobotFileParser, gbp_to_eur_rate: float) -> dict | None:
-    if not rp.can_fetch(HEADERS["User-Agent"], url):
-        print(f"  [skipped] robots.txt disallows: {url}")
+def scrape_zavvi_product(
+    url: str,
+    category: str,
+    policy: RobotsPolicy,
+    gbp_to_eur_rate: float,
+) -> dict | None:
+    if not policy.can_fetch(url):
         return None
 
+    policy.wait_before_request()
     response = requests.get(url, headers=HEADERS, timeout=10)
+    response.raise_for_status()
     response.encoding = "utf-8"
     soup = BeautifulSoup(response.text, "html.parser")
 
@@ -90,19 +88,25 @@ def scrape_zavvi_product(url: str, category: str, rp: RobotFileParser, gbp_to_eu
 
 def scrape_all_zavvi_products():
     """Loop through every product in ZAVVI_PRODUCTS, scrape each, pause between requests."""
-    rp = get_zavvi_robots_parser()
+    policy = RobotsPolicy(DOMAIN)
     gbp_to_eur_rate = get_gbp_to_eur_rate()
     print(f"Using GBP to EUR rate: {gbp_to_eur_rate}")
     results = []
 
     for i, product in enumerate(ZAVVI_PRODUCTS, start=1):
         print(f"Fetching product {i} of {len(ZAVVI_PRODUCTS)}: {product['url']}")
-        result = scrape_zavvi_product(product["url"], product["category"], rp, gbp_to_eur_rate)
+        try:
+            result = scrape_zavvi_product(
+                product["url"],
+                product["category"],
+                policy,
+                gbp_to_eur_rate,
+            )
+        except requests.RequestException as exc:
+            print(f"  [!] Failed to fetch {product['url']}: {exc}")
+            result = None
         if result is not None:
             results.append(result)
-
-        if i < len(ZAVVI_PRODUCTS):
-            time.sleep(CRAWL_DELAY_SECONDS)
 
     return results
 

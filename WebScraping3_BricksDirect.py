@@ -10,10 +10,10 @@ Price is read from:
     <span class="price product-price" aria-label="Price"> €22.80 </span>
 
 Responsible scraping:
-  - CRAWL_DELAY_SECONDS is set to 10 seconds between requests, as defined in bricksdirect.com/robots.txt
-    first.
+  - Loads robots.txt and checks every category/pagination URL before requesting it.
+  - Uses at least 10 seconds between requests, or a longer declared crawl delay.
   - Only reads publicly listed catalog/category pages (GET requests).
-  - Sends a normal browser User-Agent; does not bypass any login/paywall.
+  - Transparently identifies this educational project; does not bypass a login/paywall.
 
 Output:
   - CSV file written to OUTPUT_PATH: bricksdirect_prices.csv
@@ -21,12 +21,13 @@ Output:
 
 import csv
 import re
-import time
 from pathlib import Path
 
 import requests
 from bs4 import BeautifulSoup
 from datetime import datetime
+
+from scraping_policy import RobotsPolicy, USER_AGENT
 
 # ----------------------------------------------------------------------
 # CONFIG 
@@ -37,23 +38,27 @@ START_URLS = [
     # "https://bricksdirect.com/collections/lego-star-wars",
 ]
 MAX_PAGES_PER_CATEGORY = 5       # how many paginated pages to follow per start URL
-CRAWL_DELAY_SECONDS = 10.0       # required delay between requests
 
 # Save the CSV in the same folder as this script, whatever machine it runs on.
 SCRIPT_DIR = Path(__file__).resolve().parent
 OUTPUT_PATH = SCRIPT_DIR / "bricksdirect_prices.csv"
 
 HEADERS = {
-    "User-Agent": (
-        "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 "
-        "(KHTML, like Gecko) Chrome/125.0.0.0 Safari/537.36"
-    ),
+    "User-Agent": USER_AGENT,
     "Accept-Language": "en-IE,en;q=0.9",
 }
 
 
-def get_soup(url: str, session: requests.Session) -> BeautifulSoup | None:
+def get_soup(
+    url: str,
+    session: requests.Session,
+    policy: RobotsPolicy,
+) -> BeautifulSoup | None:
+    if not policy.can_fetch(url):
+        return None
+
     try:
+        policy.wait_before_request()
         resp = session.get(url, headers=HEADERS, timeout=15)
         resp.raise_for_status()
         return BeautifulSoup(resp.text, "html.parser")
@@ -169,13 +174,14 @@ def find_next_page_url(soup: BeautifulSoup, current_url: str) -> str | None:
 def scrape_all() -> list[dict]:
     all_products = []
     seen_urls = set()
+    policy = RobotsPolicy("https://bricksdirect.com")
 
     with requests.Session() as session:
         for start_url in START_URLS:
             url = start_url
             for page_num in range(1, MAX_PAGES_PER_CATEGORY + 1):
                 print(f"Fetching page {page_num} of {start_url}: {url}")
-                soup = get_soup(url, session)
+                soup = get_soup(url, session, policy)
                 if soup is None:
                     break
 
@@ -196,8 +202,6 @@ def scrape_all() -> list[dict]:
                     break
 
                 next_url = find_next_page_url(soup, url)
-                # Required crawl delay before the next request (final page or not)
-                time.sleep(CRAWL_DELAY_SECONDS)
 
                 if not next_url or next_url == url:
                     break
