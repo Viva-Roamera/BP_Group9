@@ -20,11 +20,10 @@ City, Ninjago.
 lego_price_tracker/BP_GROUP9
 ├── main.py                 # runs the full pipeline end-to-end
 ├── WebScraping             # 4 shops with LEGO in the offerings
-│   ├── WebScraping2.py     # scraping prices from Zavvi
-│   ├── WebScraping3.py     # scraping prices from BricksDirect
-│   ├── WebScraping4.py     # scraping prices from Brickmo
-│   ├── WebScraping5.py     # scraping prices from JB Spielwaren
-│   └── WebScraping6.py     # scraping prices from Brickmo with extended products + category
+│   ├── WebScraping2.py                 # scraping prices from https://www.zavvi.com/
+│   ├── WebScraping3_BricksDirect.py    # scraping prices from https://bricksdirect.ie/
+│   ├── WebScraping5_JBSpielwaren.py    # scraping prices from https://www.jb-spielwaren.de/
+│   └── WebScraping6_Brickmo2.py        # scraping prices from https://www.brickmo.com/
 ├── DataCleansing.py        # cleanse and normalize raw data, create ProductID into staging files
 ├── PriceComparison.py      # price comparison: lowest/highest price, gaps --> extract excel output
 ├── DataVisualization.py    # create matplotlib charts 
