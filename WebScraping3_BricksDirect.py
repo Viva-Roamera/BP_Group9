@@ -4,9 +4,9 @@ Note: Need to install the following packages if not already installed:
     pip install pandas beautifulsoup4 requests
 ============================================
 Responsible scraping:
-  - Checks bricksdirect.com/robots.txt before scraping each start URL and
+  - Checks bricksdirect.ie/robots.txt before scraping each start URL and
     skips any URL that's disallowed for our user agent.
-  - CRAWL_DELAY_SECONDS is set to 10 seconds between requests, as defined in bricksdirect.com/robots.txt
+  - CRAWL_DELAY_SECONDS is set to 10 seconds between requests, as defined in bricksdirect.ie/robots.txt
     first.
   - Only reads publicly listed catalog/category pages (GET requests).
   - Sends a normal browser User-Agent; does not bypass any login/paywall.
