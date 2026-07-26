@@ -31,7 +31,7 @@ from datetime import datetime
 # CONFIG 
 # ----------------------------------------------------------------------
 START_URLS = [
-    "https://bricksdirect.ie/lego-city", "https://bricksdirect.ie/lego-star-wars", "https://bricksdirect.ie/lego-friends" 
+    "https://bricksdirect.ie/lego-city", "https://bricksdirect.ie/lego-star-wars", "https://bricksdirect.ie/lego-friends"
     # Add more category/listing page URLs here, e.g.: "https://bricksdirect.ie/lego-city"
 ]
 MAX_PAGES_PER_CATEGORY = 3       # how many paginated pages to follow per start URL
