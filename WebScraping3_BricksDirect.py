@@ -1,5 +1,5 @@
 """
-## Iva - BricksDirect.com - product price scraper
+## Iva - BricksDirect.ie - product price scraper
 Note: Need to install the following packages if not already installed:
     pip install pandas beautifulsoup4 requests
 ============================================
