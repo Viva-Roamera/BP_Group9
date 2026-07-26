@@ -18,6 +18,7 @@ and make Cloud9 toy retailer's LEGO offering more competitive.
 ```
 Lego_price_tracker/BP_Group9
 ├── main.py                 # runs the full pipeline end-to-end
+├── scraping_policy.py      # scraping policy
 ├── WebScraping             # 4 shops with LEGO in the offerings
 │   ├── WebScraping2.py     # scraping prices from Zavvi
 │   ├── WebScraping3.py     # scraping prices from BricksDirect
